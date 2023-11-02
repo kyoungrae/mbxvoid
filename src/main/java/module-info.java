@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author ikyoungtae
+ *
+ */
+module mbxvoid {
+}
