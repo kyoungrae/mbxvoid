@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ikyoungtae
- *
- */
-module mbxvoid {
-}
