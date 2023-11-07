@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
-<%@ include file="../layout/header.jspf"%>
+<%@ include file="layout/header.jsp"%>
+
 <body>
     <div id="main_world_body" class="col-percent-100">
         <!-- TOP 영역 -->
@@ -23,7 +24,7 @@
                         <div class="user_info_box-sub display-flex">
                             <article class="my_info cursor-pointer display-flex">내정보1</article>
                             <article class="my_info cursor-pointer display-flex">내정보2</article>
-                            <article class="my_info cursor-pointer display-flex">내정보3</article>
+                            <article class="my_info cursor-pointer display-flex">로그아웃</article>
                         </div>
                         <div class="bar_box cursor-pointer" data-active-click="false"  data-infobox-show="false">
                             <div class="bar_01"></div>
@@ -53,7 +54,7 @@
         <!-- CONTEST 영역 -->
 
         <!-- FOOTER 영역 -->
-        <%@ include file="../layout/footer.jspf"%>
+        <%@ include file="layout/footer.jsp"%>
         <!-- FOOTER 영역 -->
     </div>
 </body>

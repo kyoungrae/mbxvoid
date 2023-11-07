@@ -15,13 +15,37 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <java-version>1.8</java-version>
+    <org.springframework-version>5.1.5.RELEASE</org.springframework-version>
   </properties>
-
+   
   
 	
   <dependencies>
+	   <dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.12.3</version> <!-- 최신 버전으로 업데이트 -->
+		</dependency>
+	
+	    <!-- Log4j 2 -->
+	    <dependency>
+	        <groupId>org.apache.logging.log4j</groupId>
+	        <artifactId>log4j-api</artifactId>
+	        <version>2.14.1</version> <!-- Replace with the latest version -->
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.logging.log4j</groupId>
+	        <artifactId>log4j-core</artifactId>
+	        <version>2.14.1</version> <!-- Replace with the latest version -->
+	    </dependency>
+	  <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>${org.springframework-version}</version>
+	</dependency>
 	 <dependency>
 		<groupId>javax.servlet</groupId>
 		<artifactId>javax.servlet-api</artifactId>
@@ -47,6 +71,11 @@
 	    <groupId>org.mybatis</groupId>
 	    <artifactId>mybatis-spring</artifactId>
 	    <version>1.2.2</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.maven.plugin-tools</groupId>
+	  <artifactId>maven-plugin-annotations</artifactId>
+	  <version>3.10.1</version>
 	</dependency>
   </dependencies>
   <build>

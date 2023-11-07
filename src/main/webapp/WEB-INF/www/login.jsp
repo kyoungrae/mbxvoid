@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../layout/header.jspf" %>
+<%@ include file="layout/header.jsp" %>
 <body>
     <div id="world_body" class="display-flex">
         <section class="login_box-section display-flex">
@@ -33,5 +33,16 @@
 <script src="/com/js/common.js"></script>
 
 <script>
-	
+	$("#icon-sign_in-button").click(function(){
+		 $.ajax({
+		        type: "POST", 
+		        url: "/mainPage.do?command=goMainPage",
+		        success: function(data) {
+		            
+		            window.location.href="/mainPage.do?command=goMainPage";
+		        },
+		        error: function() {
+		        }
+		    });
+	});
 </script>

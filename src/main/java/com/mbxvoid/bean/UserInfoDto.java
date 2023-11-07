@@ -1,4 +1,4 @@
-package mbxvoid.bean;
+package com.mbxvoid.bean;
 
 public class UserInfoDto {
 	String user_id;
