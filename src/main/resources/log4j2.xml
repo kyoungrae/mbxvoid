@@ -9,7 +9,7 @@
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="${LOG_PATTERN}" />
         </Console>
-		<RollingFile name="file" fileName="${LOG_PATH}/cmlog.log" filePattern="${LOG_PATH}/mbxvoidlog.log.%i">
+		<RollingFile name="file" fileName="${LOG_PATH}/mbxvoidlog.log" filePattern="${LOG_PATH}/mbxvoidlog.log.%i">
 			<PatternLayout pattern="${LOG_PATTERN}" />
 			<Policies>
 				<!-- size 단위: Byte(default), KB, MB, or GB -->
@@ -20,7 +20,7 @@
 			<DefaultRolloverStrategy max="20" fileIndex="min" />
 		</RollingFile>
 
-<!-- 		<RollingFile name="file" fileName="${LOG_PATH}/cmlog.log" filePattern="${LOG_PATH}/cmlog.log.%d{yyyyMMdd}"> -->
+<!-- 		<RollingFile name="file" fileName="${LOG_PATH}/mbxvoidlog.log" filePattern="${LOG_PATH}/mbxvoidlog.log.%d{yyyyMMdd}"> -->
 <!-- 			<PatternLayout pattern="${LOG_PATTERN}" /> -->
 <!-- 			<Policies> -->
 <!--    				interval(default 1)이므로 1초 간격으로 rolling 수행  -->
