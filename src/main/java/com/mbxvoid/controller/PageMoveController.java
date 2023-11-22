@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageMoveController {
 	   @RequestMapping(params = "command=goMainPage")
 	    public ModelAndView goMainPage() {
-		   System.out.println("hihi");
 	    	ModelAndView modelAndView = new ModelAndView();
 	        modelAndView.setViewName("layer.contentpage.main");
 	        return modelAndView;
@@ -26,7 +25,7 @@ public class PageMoveController {
 		   String prefix = "layer.contentpage.";
 		   String path  = request.getParameter("menu_nm");
 		   String fullPath = prefix + path;
-		   
+		  
 		   mv.setViewName(fullPath);
 		   return mv;
 	   }

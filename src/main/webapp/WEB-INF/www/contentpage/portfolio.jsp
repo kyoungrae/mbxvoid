@@ -15,120 +15,7 @@
                             <p>Skills</p>
                         </div>
                         <div class="pf-skills-box display-flex">
-                            <div class="pf-skills-box-title col-percent-20">
-                                <div class="pf-skills-subtitle">Backend</div>
-                                <div class="pf-skills-content-box">
-                                    <div class="pf-skills-content">
-                                        JAVA
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        Spring MVC
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-skills-box-title col-percent-20">
-                                <div class="pf-skills-subtitle">Backend</div>
-                                <div class="pf-skills-content-box">
-                                    <div class="pf-skills-content">
-                                        JAVA
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        Spring MVC
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pf-skills-box-title col-percent-20">
-                                <div class="pf-skills-subtitle">Backend</div>
-                                <div class="pf-skills-content-box">
-                                    <div class="pf-skills-content">
-                                        JAVA
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        Spring MVC
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                    <div class="pf-skills-content">
-                                        JSTL
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 					<div class="pf-wep col-percent-80 display-flex flex-direction-column align-items-center margin-top-10percent">
@@ -141,6 +28,7 @@
 </div>
 <script>
 window.onload = function(){
+	searchSkillsContents();
 	searchContents();
 }
 function searchContents(){
@@ -150,7 +38,8 @@ function searchContents(){
     	type:"POST",
     	url : path,
     	data: JSON.stringify({
-    		menu_id : "MN001"
+    		menu_id : "MN001",
+    		content_type : "2"
     	}),
     	contentType : "application/json; charset=utf-8",
     	dataType : "json",
@@ -166,12 +55,61 @@ function searchContents(){
     	
     });
 }
+function searchSkillsContents(){
+	var mebx = new Mebx();
+	var path = '/contents.do?command=searchContentsInfo';
+    $.ajax({
+    	type:"POST",
+    	url : path,
+    	data: JSON.stringify({
+    		menu_id : "MN001",
+    		content_type : "1"
+    	}),
+    	contentType : "application/json; charset=utf-8",
+    	dataType : "json",
+    	success : function(data){
+    		console.log(data)
+    		
+    		insetSkillsLayer(data)
+    	},
+    	error : function(){
+    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
+    		
+    	}
+    	
+    });
+}
+function insetSkillsLayer(cont){
+	console.log("cont: ",cont);
+	var html = "";
+	var title = "";
+	for(var i = 0; i < cont.length; i++){
+		var skillTypeHtml = "";
+		if("MN001" == cont[i].menu_id && cont[i].content_type == "1"){
+			var skillType = (cont[i].content_sub_parts_1).split(",");
+			
+			for(var j = 0; j<skillType.length; j++){
+				skillTypeHtml +='<div class="pf-skills-content">'+skillType[j]+'</div>';
+			}
+			
+			title = cont[0].content_title;
+			html += '<div class="pf-skills-box-title col-percent-20">'
+                +'<div class="pf-skills-subtitle">'+cont[i].content_parts_1+'</div>'
+                +'<div class="pf-skills-content-box">'
+                    +skillTypeHtml
+                +'</div>'
+            +'</div>';
+		}
+	}
+	$(".pf-skills-box").append(html);
+	
+}
 
 function insertContentLayer(cont){
 	var innerHtml = "";
 	var contentTitle = "";
 	for(var i = 0; i < cont.length; i++){
-		if("MN001" == cont[i].menu_id){
+		if("MN001" == cont[i].menu_id && cont[i].content_type == "2"){
 			contentTitle = cont[0].content_title
 			innerHtml += '<div class="pf-common-content display-flex justify-content-center">'
 									 +'<div class="pf-wep-box col-percent-90 row-percent-100">'

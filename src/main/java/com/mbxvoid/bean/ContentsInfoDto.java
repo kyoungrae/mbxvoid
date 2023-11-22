@@ -3,6 +3,7 @@ package com.mbxvoid.bean;
 public class ContentsInfoDto {
 	
 	public String menu_id;
+	public String content_type;
 	public String content_title;
 	public String content_sub_title;
 	public String content_parts_1;
@@ -28,6 +29,13 @@ public class ContentsInfoDto {
 	}
 	public String getContent_title() {
 		return content_title;
+	}
+	
+	public String getContent_type() {
+		return content_type;
+	}
+	public void setContent_type(String content_type) {
+		this.content_type = content_type;
 	}
 	public void setContent_title(String content_title) {
 		this.content_title = content_title;

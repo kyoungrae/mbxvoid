@@ -4,6 +4,7 @@
 <mapper namespace="mbxvoid">
 	<resultMap id="Result_ContentsInfo" type="com.mbxvoid.bean.ContentsInfoDto">
 		<result property="menu_id" column="menu_id"/>
+		<result property="content_type" column="content_type"/>
 		<result property="content_title" column="content_title"/>
 		<result property="content_sub_title" column="content_sub_title"/>
 		<result property="content_parts_1" column="content_parts_1"/>
@@ -28,6 +29,7 @@
 		<where>
 			<if test="menu_id != null and menu_id != '' ">menu_id = #{menu_id}</if>
 			<if test="content_title != null and content_title != '' ">AND content_title = #{content_title}</if>
+			<if test="content_type != null and content_type != '' ">AND content_type = #{content_type}</if>
 			<if test="content_sub_title != null and content_sub_title != '' ">AND content_sub_title = #{content_sub_title}</if>
 			<if test="content_parts_1 != null and content_parts_1 != '' ">AND content_parts_1 = #{content_parts_1}</if>
 			<if test="content_parts_2 != null and content_parts_2 != '' ">AND content_parts_2 = #{content_parts_2}</if>

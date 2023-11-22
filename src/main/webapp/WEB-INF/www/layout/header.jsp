@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
  <section class="world_top col-percent-100 row-px-50 display-flex">
             <div class="world_top-box col-percent-90 display-flex">
                 <div class="logo col-percent-10 text_align-center display-flex" ><a href="/page.do?command=goMainPage">HOME</a></div>
                 <div class="memu_info col-percent-70 display-flex" >
                     <ul class="menu_info_box col-percent-100 display-flex">
+                    	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=portfolio">이력</a></li>
+                    	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=schedule">일정</a></li>
                     </ul>
                 </div>
                 <div class="user_info col-percent-20" >
@@ -28,7 +29,7 @@
 
 <script>
 window.onload = function(){
-	searchMenu();
+// 	searchMenu();
 }
 function searchMenu(){
 	var mebx = new Mebx();
@@ -48,7 +49,6 @@ function searchMenu(){
     			menuList += '<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm='+data[i].menu_file_nm+'">'+data[i].menu_nm+'</a></li>';
     		}
     			$(".menu_info_box").append(menuList);
-    			console.log("ddd")
     	},
     	error : function(){
     		mebx.showMessage({title:"error", message:"error" ,type:"error"});
