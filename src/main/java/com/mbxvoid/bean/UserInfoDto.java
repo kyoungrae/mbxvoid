@@ -4,6 +4,10 @@ public class UserInfoDto {
 	String user_id;
 	String user_nm;
 	String user_pw;
+	String user_en_nm;
+	
+	String sys_cr_dt;
+	String sys_ud_dt;
 	
 	public String getUser_id() {
 		return user_id;
@@ -23,6 +27,26 @@ public class UserInfoDto {
 	public void setUser_pw(String user_pw) {
 		this.user_pw = user_pw;
 	}
+	
+	public String getUser_en_nm() {
+		return user_en_nm;
+	}
+	public void setUser_en_nm(String user_en_nm) {
+		this.user_en_nm = user_en_nm;
+	}
+	public String getSys_cr_dt() {
+		return sys_cr_dt;
+	}
+	public void setSys_cr_dt(String sys_cr_dt) {
+		this.sys_cr_dt = sys_cr_dt;
+	}
+	public String getSys_ud_dt() {
+		return sys_ud_dt;
+	}
+	public void setSys_ud_dt(String sys_ud_dt) {
+		this.sys_ud_dt = sys_ud_dt;
+	}
+	
 	
 	
 }

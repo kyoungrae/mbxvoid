@@ -32,6 +32,10 @@
 .row-px-75{ height: 75px;}.row-px-80{ height: 80px;}
 .row-px-85{ height: 85px;}.row-px-90{ height: 90px;}
 .row-px-95{ height: 95px;}.row-px-100{height: 100px;}
+.row-px-200{height: 200px;}.row-px-300{height: 300px;}
+.row-px-400{height: 400px;}.row-px-500{height: 500px;}
+.row-px-600{height: 600px;}.row-px-700{height: 700px;}
+.row-px-800{height: 800px;}.row-px-900{height: 900px;}
 
 .row-percent-5 { height: 5%;} .row-percent-10{ height: 10%;}
 .row-percent-15{ height: 15%;}.row-percent-20{ height: 20%;}
@@ -47,6 +51,9 @@
 
 
 /* 기본 css ---------------------------------------------------------------------------------*/
+.word-break-keep-all{
+    word-break: keep-all;
+}
 .cursor-pointer{
     cursor: pointer;
 }
@@ -90,6 +97,19 @@
 }
 .border{
     border:1px solid;
+}
+a{
+	text-decoration:none;
+	color:#000000;
+}
+.align-items-center{
+    align-items: center;
+}
+.margin-top-10percent{
+	margin-top:10%;
+}
+.margin-top-10px{
+	margin-top:10px;
 }
 /* 기본 css ---------------------------------------------------------------------------------*/
 
@@ -241,7 +261,10 @@
 }
 .section_body{
     /* height: 80vh; */
-    height: 1800px;
+    /* height: 1800px; */
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .logo{
     align-items: center;
@@ -328,6 +351,17 @@
 }
 #clock{
     margin: 10px;
+}
+.vibration{
+	animation: vibration .1s infinite;
+}
+@keyframes vibration {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(-1deg);
+  }
 }
 /* 메인 페이지 ---------------------------------------------------------------------------------*/
 /* 달력 calender---------------------------------------------------------------------------------*/
@@ -422,7 +456,7 @@
 .mebx_schedule_detail{
     position: relative;
     top: -140px;
-    left: 130px;
+    left: 111%;
     width: 300px;
     height: 220px;
     border-radius: 5%;
@@ -489,4 +523,85 @@
 }
 
 /* 달력 ---------------------------------------------------------------------------------*/
+/* 포트폴리오 -----------------------------------------------------------------------------*/
+.pf-skills , .pf-wep{
+    box-shadow: 0px 8px 8px #0000003b;
+    box-sizing: border-box;
+    padding: 25px;
+    text-shadow: 2px 2px 2px #00000052;
+    border-radius: 5px;
+    position:relative;
+}
+.pf-skills{
+    background:linear-gradient(344deg, rgb(209, 209, 209), rgb(168, 168, 168) 40%, white 40%, white);
+}
+.pf-wep{
+    background:linear-gradient(30deg, rgb(209, 209, 209), rgb(244 244 244) 40%, white 40%, white);
+}
+.pf-title{
+    align-items: center;
+    margin: 10% 0;
+}
+.pf-title > p{
+	font-size:5rem;
+}
+.pf-title-content > p{
+    font-size: 2rem;
+    text-align: center;
+}
+.pf-title-content{
+    margin: 10% 0;
+}
+.pf-skills-box{
+    justify-content: space-evenly;
+}
+.pf-skills-title , .pf-wep-title{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.pf-skills-subtitle{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.pf-skills-content-box , .pf-wep-box{
+    text-align: center;
+    box-shadow: 2px 3px 5px #0000003b;
+    border-radius: 5px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 25px;
+}
+.pf-skills-content{
+    font-size: 1.4rem;
+}
+.pf-wep-box{
+    background-color: #fff;
+    text-align: left;
+}
+.pf-wep-box-title{
+    text-align: left;
+    font-size: 1.5rem;
+}
+.pf-wep-box-layer{
+    margin: 15px;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+.pf-wep-box-contentlayer{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.pf-content-title{
+    margin:45px 0px;
+}
+.pf-common-content{
+    margin: 30px 0;
+    min-width: 90%;
+}
+
+/* 포트폴리오 -----------------------------------------------------------------------------*/
 

@@ -9,7 +9,6 @@ var type =""; // 메세지 타입
 var e = {title:"", message:"" ,type:""}; // 파라티터 타입
 
 Mebx.prototype.showMessage = function(e){
-
     var messageBox = "";
     $(".messageBox_layer").remove();
         messageBox = "<div class='messageBox_layer'><div class='messageBox'><div class='title'>["+e.title+"]</div><div class='message'>"+e.message+"</div></div></div>";
@@ -35,16 +34,14 @@ Mebx.prototype.showMessage = function(e){
                 $(this).css({"background-color": "rgb(100, 218, 0, 0.8)"});
             });
         }
-        setTimeout(function () {
             $(".messageBox_layer").addClass("show");
-            setTimeout(function () {
-                $(".messageBox_layer").removeClass("show");
-            }, 2000);
-            setTimeout(function () {
-                $(".messageBox_layer").remove();
-            }, 3000);
-        }, 100);
-
+            
+            timeoutSetting("messageBox_layer");
+}
+function timeoutSetting(calss_name){
+	  setTimeout(function () {
+                $("."+calss_name).removeClass("show");
+            }, 1000);
 }
 /* 
  * Mebx.infoBar
@@ -196,7 +193,6 @@ Mebx.prototype.Calender = function(e){
         var detailStatus = $(".mebx_calender-weekly_date[data-nowdate='"+day+"']").data("detail-status");
         
         if(1 <= detail_cnt){
-            console.log(detail_cnt)
             $(".mebx_calender-weekly_date").parent().children(".mebx_schedule_detail").remove();
             $(".mebx_calender-weekly_date").data("detail-status", false);
 
@@ -253,7 +249,6 @@ Mebx.prototype.Calender = function(e){
  * 일정 detail 박스에 초기 시간 셋팅
  */
 function colorSerlrctor(e){
-    console.log(e)
     var colorOptions = [{ value: "#FF0000", text: "Red" },
                         { value: "#0000FF", text: "Blue" },
                         { value: "#00FF00", text: "Green" },

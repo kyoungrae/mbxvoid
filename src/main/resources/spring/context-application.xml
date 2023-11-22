@@ -9,12 +9,28 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc">
 
 	<context:component-scan base-package="com.mbxvoid.controller"/> 
+	<context:component-scan base-package="com.mbxvoid/**"/> 
 
   	<mvc:annotation-driven/>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	    <property name="prefix" value="/WEB-INF/www/"/> <!-- JSP 파일 경로의 접두사 -->
 	    <property name="suffix" value=".jsp"/> <!-- JSP 파일 확장자 -->
+	    <property name="order" value="2" />
 	</bean>
 	
+	  <!-- Tiles 설정 -->
+    <bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>WEB-INF/classes/spring/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ViewResolver 설정 -->
+    <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+        <property name="order" value="1" />
+    </bean>
 </beans>

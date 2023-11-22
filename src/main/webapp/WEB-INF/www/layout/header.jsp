@@ -1,14 +1,61 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<link rel="stylesheet" href="/com/css/index.css">
-<link href="/com/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/all.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/solid.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/brands.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/v4-font-face.css" rel="stylesheet">
+ <section class="world_top col-percent-100 row-px-50 display-flex">
+            <div class="world_top-box col-percent-90 display-flex">
+                <div class="logo col-percent-10 text_align-center display-flex" ><a href="/page.do?command=goMainPage">HOME</a></div>
+                <div class="memu_info col-percent-70 display-flex" >
+                    <ul class="menu_info_box col-percent-100 display-flex">
+                    </ul>
+                </div>
+                <div class="user_info col-percent-20" >
+                    <div class="user_info_box col-percent-50 row2-percent-100 float-right display-flex ">
+                        <div class="user_info_icon"><i class="fa-solid fa-user"></i></div>
+                        <div id="user_nm_box" class="user_nm">이경태</div>
+                        <div class="user_info_box-sub display-flex">
+                            <article class="my_info cursor-pointer display-flex">내정보1</article>
+                            <article class="my_info cursor-pointer display-flex">내정보2</article>
+                            <article class="my_info cursor-pointer display-flex">로그아웃</article>
+                        </div>
+                        <div class="bar_box cursor-pointer" data-active-click="false"  data-infobox-show="false">
+                            <div class="bar_01"></div>
+                            <div class="bar_02"></div>
+                            <div class="bar_03"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+<script>
+window.onload = function(){
+	searchMenu();
+}
+function searchMenu(){
+	var mebx = new Mebx();
+	var path = '/menu.do?command=searchMenuInfo';
+    $.ajax({
+    	type:"POST",
+    	url : path,
+    	data: JSON.stringify({
+    		
+    	}),
+    	contentType : "application/json; charset=utf-8",
+    	dataType : "json",
+    	success : function(data){
+    		var length = data.length;
+    		var menuList = "";
+    		for(var i = 0; i<length; i++){
+    			menuList += '<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm='+data[i].menu_file_nm+'">'+data[i].menu_nm+'</a></li>';
+    		}
+    			$(".menu_info_box").append(menuList);
+    			console.log("ddd")
+    	},
+    	error : function(){
+    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
+    		
+    	}
+    	
+    });
+}
+
+</script>

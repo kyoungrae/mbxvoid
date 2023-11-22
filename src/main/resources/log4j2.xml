@@ -30,18 +30,6 @@
  
     </Appenders>
     <Loggers>
-<!--         <Logger name="org.apache.ibatis" level="DEBUG" additivity="false"> -->
-<!--             <AppenderRef ref="console" /> -->
-<!--         </Logger> -->
-<!--         <Logger name="com.ibatis" level="DEBUG" additivity="false"> -->
-<!--             <AppenderRef ref="console" /> -->
-<!--         </Logger>         -->
-<!--         <Logger name="org.mybatis" level="DEBUG" additivity="false"> -->
-<!--             <AppenderRef ref="console" /> -->
-<!--         </Logger>         -->
-<!--         <Logger name="java.sql" level="DEBUG" additivity="false"> -->
-<!--             <AppenderRef ref="console" /> -->
-<!--         </Logger> -->
 	    <Logger name="org.springframework" level="DEBUG" additivity="false">
 	        <AppenderRef ref="console" />
 	    </Logger>

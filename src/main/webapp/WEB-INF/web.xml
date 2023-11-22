@@ -8,7 +8,12 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>WEB-INF/classes/spring/applicationContext.xml</param-value>
+			<param-value>
+				/WEB-INF/classes/spring/context-application.xml
+				/WEB-INF/classes/spring/context-mapper.xml
+				/WEB-INF/classes/spring/context-datasource.xml
+				/WEB-INF/classes/spring/tiles.xml
+			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

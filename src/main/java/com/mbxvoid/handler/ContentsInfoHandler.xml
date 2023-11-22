@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mbxvoid">
+	<resultMap id="Result_ContentsInfo" type="com.mbxvoid.bean.ContentsInfoDto">
+		<result property="menu_id" column="menu_id"/>
+		<result property="content_title" column="content_title"/>
+		<result property="content_sub_title" column="content_sub_title"/>
+		<result property="content_parts_1" column="content_parts_1"/>
+		<result property="content_sub_parts_1" column="content_sub_parts_1"/>
+		<result property="content_parts_2" column="content_parts_2"/>
+		<result property="content_sub_parts_2" column="content_sub_parts_2"/>
+		<result property="content_parts_3" column="content_parts_3"/>
+		<result property="content_sub_parts_3" column="content_sub_parts_3"/>
+		<result property="content_parts_4" column="content_parts_4"/>
+		<result property="content_sub_parts_4" column="content_sub_parts_4"/>
+		<result property="content_1" column="content_1"/>
+		<result property="content_2" column="content_2"/>
+		<result property="sys_cr_user_id" column="sys_cr_user_id"/>
+		<result property="sys_ud_user_id" column="sys_ud_user_id"/>
+		<result property="sys_ud_dt" column="sys_ud_dt"/>
+		<result property="sys_cr_dt" column="sys_cr_dt"/>
+		
+	</resultMap>
+
+	<select id="SELECT_COM_MBX_CONTENTS" resultMap="Result_ContentsInfo" parameterType="com.mbxvoid.bean.ContentsInfoDto">
+		select * from com_mbx_contents
+		<where>
+			<if test="menu_id != null and menu_id != '' ">menu_id = #{menu_id}</if>
+			<if test="content_title != null and content_title != '' ">AND content_title = #{content_title}</if>
+			<if test="content_sub_title != null and content_sub_title != '' ">AND content_sub_title = #{content_sub_title}</if>
+			<if test="content_parts_1 != null and content_parts_1 != '' ">AND content_parts_1 = #{content_parts_1}</if>
+			<if test="content_parts_2 != null and content_parts_2 != '' ">AND content_parts_2 = #{content_parts_2}</if>
+			<if test="content_parts_3 != null and content_parts_3 != '' ">AND content_parts_3 = #{content_parts_3}</if>
+			<if test="content_parts_4 != null and content_parts_4 != '' ">AND content_parts_4 = #{content_parts_4}</if>
+			<if test="sys_cr_user_id != null and sys_cr_user_id != '' ">AND sys_cr_user_id = #{sys_cr_user_id}</if>
+			<if test="sys_ud_user_id != null and sys_ud_user_id != '' ">AND sys_ud_user_id = #{sys_ud_user_id}</if>
+		</where>
+	</select>
+</mapper>
