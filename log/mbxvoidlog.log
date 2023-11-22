@@ -4754,3 +4754,4 @@
 23-11-23 02:30:05.948 DEBUG [nio-8080-exec-2] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9da775c]
 23-11-23 02:30:05.958 DEBUG [nio-8080-exec-4] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
 23-11-23 02:30:05.959 DEBUG [nio-8080-exec-4] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e721624]
+23-11-23 02:48:19.486 DEBUG [alina-utility-2] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
