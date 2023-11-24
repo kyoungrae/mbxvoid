@@ -12,6 +12,7 @@
 <link href="/com/assets/fontawesome/css/solid.css" rel="stylesheet">
 <link href="/com/assets/fontawesome/css/brands.css" rel="stylesheet">
 <link href="/com/assets/fontawesome/css/v4-font-face.css" rel="stylesheet">
+<script src="/com/js/jquery/jquery-3.6.0.min.js"></script>
 <body>
  	<div id="main_world_body" class="col-percent-100">
 	        <tiles:insertAttribute name="header" />
@@ -21,7 +22,6 @@
 	        <tiles:insertAttribute name="footer" />
     </div>
 </body>
-<script src="/com/js/jquery/jquery-3.6.0.min.js"></script>
 <script src="/com/js/login.js"></script>
 <script src="/com/js/common.js"></script>
 <script>

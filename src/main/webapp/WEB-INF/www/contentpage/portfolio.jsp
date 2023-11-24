@@ -4,11 +4,11 @@
 		<article class="col-percent-100 display-flex justift-content-flex-end">
         </article>
         <article class="col-percent-100  display-flex justify-content-center flex-direction-column align-items-center margin-top-10percent">
-                    <div class="pf-title col-percent-20 row-percent-20  display-flex justify-content-center">
+                    <div class="pf-title col-percent-20 row-percent-20  display-flex justify-content-center slide-in-top">
                         <p>VOID</p>
                     </div>
-                    <div class="pf-title-content col-percent-50 row-percent-20  display-flex justify-content-center">
-                        <p class="word-break-keep-all">끊임없는 발전이 반환 없이 펼쳐지는 여정이며,<br>어떤 공백도 나의 성장을 막을 수 없다.<br> 코드의 공백을 나만의 경험으로 메우며 더 나은 나로 성장할 것이다.</p>
+                    <div class="pf-title-content col-percent-100 row-percent-20  display-flex justify-content-center">
+                        
                     </div>
                     <div class="pf-skills col-percent-80 display-flex flex-direction-column margin-top-10percent">
                         <div class="pf-content-title pf-skills-title row-percent-30">
@@ -28,9 +28,28 @@
 </div>
 <script>
 window.onload = function(){
-	searchSkillsContents();
+var addedDynamicContent = false;
+var addedSkillsContentsFlag = false;
+	$("html, body").animate({ scrollTop: 0 }, 500);
+    
 	searchContents();
 }
+addedDynamicContent = false;
+addedSkillsContentsFlag = false;
+$(window).scroll(function() {
+    if(!addedDynamicContent && $(this).scrollTop() >= 200){
+    	var html = '<p class="word-break-keep-all">끊임없는 발전이 반환 없이 펼쳐지는 여정이며,<br>어떤 공백도 나의 성장을 막을 수 없다.<br> 코드의 공백을 나만의 경험으로 메우며 더 나은 나로 성장할 것이다.</p>';
+		$(".pf-title-content").html(html);   
+		$(".pf-title-content p").addClass("tracking-in-expand-fwd");   
+		
+		addedDynamicContent = true;
+    }
+    if(!addedSkillsContentsFlag && $(this).scrollTop() >= 700){
+    	searchSkillsContents();
+    	addedSkillsContentsFlag = true;
+    }
+    
+  });
 function searchContents(){
 	var mebx = new Mebx();
 	var path = '/contents.do?command=searchContentsInfo';
@@ -44,7 +63,6 @@ function searchContents(){
     	contentType : "application/json; charset=utf-8",
     	dataType : "json",
     	success : function(data){
-    		console.log(data)
     		
     		insertContentLayer(data)
     	},
@@ -68,7 +86,6 @@ function searchSkillsContents(){
     	contentType : "application/json; charset=utf-8",
     	dataType : "json",
     	success : function(data){
-    		console.log(data)
     		
     		insetSkillsLayer(data)
     	},
@@ -80,7 +97,6 @@ function searchSkillsContents(){
     });
 }
 function insetSkillsLayer(cont){
-	console.log("cont: ",cont);
 	var html = "";
 	var title = "";
 	for(var i = 0; i < cont.length; i++){
@@ -93,7 +109,7 @@ function insetSkillsLayer(cont){
 			}
 			
 			title = cont[0].content_title;
-			html += '<div class="pf-skills-box-title col-percent-20">'
+			html += '<div class="pf-skills-box-title col-percent-25 slide-in-top">'
                 +'<div class="pf-skills-subtitle">'+cont[i].content_parts_1+'</div>'
                 +'<div class="pf-skills-content-box">'
                     +skillTypeHtml
@@ -165,5 +181,7 @@ function insertContentLayer(cont){
 	$(".pf-wep").append(innerHtml);
 	$(".pf-wep-title p").html(contentTitle);
 }
+
+
 
 </script>

@@ -313,20 +313,9 @@ function addSchedule(year , month){
                             "target_yyyy":year
                             ,"target_mm":month
                             ,"target_dt":"21"
-                            ,"memo":"영이랑 점심약속"
-                        },
-                        {
-                            "target_yyyy":year
-                            ,"target_mm":month
-                            ,"target_dt":"20"
-                            ,"memo":"영이랑 점심약속"
-                        },
-                        {
-                            "target_yyyy":year
-                            ,"target_mm":month
-                            ,"target_dt":"22"
-                            ,"memo":"영이랑 점심약속"
+                            ,"memo":"아아 테스트 중"
                         }
+                       
                     ]; // 테이블 연동시 데이터 매핑 해줄 변수
     var mebx_schedule_data = ""; 
 
