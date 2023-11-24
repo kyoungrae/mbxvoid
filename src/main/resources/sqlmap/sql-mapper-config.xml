@@ -12,9 +12,9 @@
     <typeAliases>
 		<typeAlias alias="HashMap" type="java.util.HashMap" />
 	</typeAliases>
-	<mappers>
-		<mapper resource="/com/mbxvoid/handler/UserInfoHandler.xml"/>
-		<mapper resource="/com/mbxvoid/handler/MenuInfoHandler.xml"/>
-		<mapper resource="/com/mbxvoid/handler/ContentsInfoHandler.xml"/>
+	<mappers>								   
+		<mapper resource="com/mbxvoid/handler/UserInfoHandler.xml"/>
+		<mapper resource="com/mbxvoid/handler/MenuInfoHandler.xml"/>
+		<mapper resource="com/mbxvoid/handler/ContentsInfoHandler.xml"/>
 	</mappers>
 </configuration>

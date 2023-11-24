@@ -33,7 +33,7 @@
 	    <Logger name="org.springframework" level="DEBUG" additivity="false">
 	        <AppenderRef ref="console" />
 	    </Logger>
-	    <Logger name="mbxvoid" level="DEBUG" additivity="false">
+	    <Logger name="com.mbxvoid" level="DEBUG" additivity="false">
 	        <AppenderRef ref="console" />
 	        <AppenderRef ref="file" />
 	    </Logger>	    
