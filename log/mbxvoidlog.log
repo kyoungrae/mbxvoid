@@ -7634,3 +7634,411 @@
 23-11-24 18:24:55.426 DEBUG [nio-8080-exec-8] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19caad3]
 23-11-24 18:25:20.453 DEBUG [alina-utility-1] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
 23-11-24 18:25:31.925 DEBUG [alina-utility-2] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+23-11-24 18:29:46.336 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:29:46.336 DEBUG [nio-8080-exec-5] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:29:46.339 DEBUG [nio-8080-exec-5] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d37a39c] was not registered for synchronization because synchronization is not active
+23-11-24 18:29:46.339 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72b592d] was not registered for synchronization because synchronization is not active
+23-11-24 18:29:46.898 DEBUG [nio-8080-exec-5] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@5cd29c30] will not be managed by Spring
+23-11-24 18:29:46.898 DEBUG [io-8080-exec-11] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@39f44fd] will not be managed by Spring
+23-11-24 18:29:46.901 DEBUG [nio-8080-exec-5] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:29:46.901 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:29:46.914 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:29:46.914 DEBUG [nio-8080-exec-5] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:29:46.947 DEBUG [nio-8080-exec-5] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:29:46.955 DEBUG [nio-8080-exec-5] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d37a39c]
+23-11-24 18:29:46.957 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:29:46.957 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72b592d]
+23-11-24 18:30:38.231 DEBUG [nio-8080-exec-3] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:38.232 DEBUG [nio-8080-exec-3] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9e21796] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:38.393 DEBUG [nio-8080-exec-3] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@73e2825d] will not be managed by Spring
+23-11-24 18:30:38.395 DEBUG [nio-8080-exec-3] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:38.397 DEBUG [nio-8080-exec-3] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:30:38.446 DEBUG [nio-8080-exec-3] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:30:38.448 DEBUG [nio-8080-exec-3] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9e21796]
+23-11-24 18:30:41.310 DEBUG [nio-8080-exec-5] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:41.313 DEBUG [nio-8080-exec-5] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@212882ae] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:41.583 DEBUG [nio-8080-exec-5] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@54fe9361] will not be managed by Spring
+23-11-24 18:30:41.585 DEBUG [nio-8080-exec-5] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:41.587 DEBUG [nio-8080-exec-5] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:30:41.748 DEBUG [nio-8080-exec-5] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:30:41.753 DEBUG [nio-8080-exec-5] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@212882ae]
+23-11-24 18:30:47.034 DEBUG [nio-8080-exec-7] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:47.035 DEBUG [nio-8080-exec-7] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d1411bf] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:47.043 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:47.044 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@703d9c0c] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:47.276 DEBUG [io-8080-exec-15] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@5fe8890f] will not be managed by Spring
+23-11-24 18:30:47.279 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:47.280 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:30:47.292 DEBUG [nio-8080-exec-7] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@640ab746] will not be managed by Spring
+23-11-24 18:30:47.293 DEBUG [nio-8080-exec-7] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:47.294 DEBUG [nio-8080-exec-7] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:30:47.310 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:30:47.311 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@703d9c0c]
+23-11-24 18:30:47.324 DEBUG [nio-8080-exec-7] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:30:47.324 DEBUG [nio-8080-exec-7] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d1411bf]
+23-11-24 18:30:49.321 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:49.322 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75dee15f] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:49.329 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:49.330 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bc8e5df] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:49.704 DEBUG [io-8080-exec-14] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@35fcd9c6] will not be managed by Spring
+23-11-24 18:30:49.704 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@bd4e286] will not be managed by Spring
+23-11-24 18:30:49.705 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:49.705 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:49.706 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:30:49.706 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:30:49.736 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:30:49.737 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75dee15f]
+23-11-24 18:30:49.747 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:30:49.747 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bc8e5df]
+23-11-24 18:30:52.495 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:30:52.495 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@376765dc] was not registered for synchronization because synchronization is not active
+23-11-24 18:30:52.963 DEBUG [io-8080-exec-12] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@18b26834] will not be managed by Spring
+23-11-24 18:30:52.969 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:30:52.970 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:30:53.006 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:30:53.007 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@376765dc]
+23-11-24 18:31:32.784 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:32.787 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@493ce815] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:32.794 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:32.795 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74da39a5] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:33.140 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@1283a047] will not be managed by Spring
+23-11-24 18:31:33.141 DEBUG [io-8080-exec-13] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@370a32bb] will not be managed by Spring
+23-11-24 18:31:33.141 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:33.141 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:33.141 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:31:33.141 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:31:33.164 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:31:33.164 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@493ce815]
+23-11-24 18:31:33.167 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:31:33.167 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74da39a5]
+23-11-24 18:31:34.978 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:34.978 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17842d23] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:35.303 DEBUG [io-8080-exec-12] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@686d2ab9] will not be managed by Spring
+23-11-24 18:31:35.307 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:35.308 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:31:35.334 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:31:35.335 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17842d23]
+23-11-24 18:31:37.176 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:37.177 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cbe6bed] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:37.553 DEBUG [io-8080-exec-15] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@4e2fefc2] will not be managed by Spring
+23-11-24 18:31:37.555 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:37.556 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:31:37.577 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:31:37.578 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cbe6bed]
+23-11-24 18:31:40.866 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:40.866 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d9987c2] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:40.874 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:40.875 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@506ebe68] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:41.173 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@534b0032] will not be managed by Spring
+23-11-24 18:31:41.176 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:41.180 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:31:41.193 DEBUG [io-8080-exec-19] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@2e413cf8] will not be managed by Spring
+23-11-24 18:31:41.193 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:41.194 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:31:41.211 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:31:41.212 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d9987c2]
+23-11-24 18:31:41.216 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:31:41.216 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@506ebe68]
+23-11-24 18:31:42.513 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:31:42.514 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5199ad93] was not registered for synchronization because synchronization is not active
+23-11-24 18:31:42.814 DEBUG [io-8080-exec-11] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@20880f4a] will not be managed by Spring
+23-11-24 18:31:42.815 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:31:42.817 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:31:42.845 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:31:42.846 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5199ad93]
+23-11-24 18:32:38.277 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:32:38.279 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f9a87d5] was not registered for synchronization because synchronization is not active
+23-11-24 18:32:38.453 DEBUG [io-8080-exec-20] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@104f8b22] will not be managed by Spring
+23-11-24 18:32:38.454 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:32:38.455 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:32:38.492 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:32:38.492 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f9a87d5]
+23-11-24 18:32:42.133 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:32:42.134 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b11bf5d] was not registered for synchronization because synchronization is not active
+23-11-24 18:32:42.494 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@3381346] will not be managed by Spring
+23-11-24 18:32:42.495 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:32:42.496 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:32:42.519 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:32:42.520 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b11bf5d]
+23-11-24 18:32:54.071 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:32:54.072 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24ce7ebc] was not registered for synchronization because synchronization is not active
+23-11-24 18:32:54.435 DEBUG [io-8080-exec-19] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@562dedbd] will not be managed by Spring
+23-11-24 18:32:54.437 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:32:54.439 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:32:54.475 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:32:54.476 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24ce7ebc]
+23-11-24 18:32:57.154 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:32:57.155 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41a1c3e9] was not registered for synchronization because synchronization is not active
+23-11-24 18:32:57.323 DEBUG [io-8080-exec-17] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@6b3313fa] will not be managed by Spring
+23-11-24 18:32:57.324 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:32:57.324 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:32:57.349 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:32:57.349 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41a1c3e9]
+23-11-24 18:33:20.234 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:33:20.235 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7916a01] was not registered for synchronization because synchronization is not active
+23-11-24 18:33:20.443 DEBUG [io-8080-exec-19] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@1efe1a09] will not be managed by Spring
+23-11-24 18:33:20.444 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:33:20.445 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:33:20.631 DEBUG [io-8080-exec-19] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:33:20.632 DEBUG [io-8080-exec-19] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7916a01]
+23-11-24 18:33:24.128 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:33:24.129 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2034d644] was not registered for synchronization because synchronization is not active
+23-11-24 18:33:24.484 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@34399a41] will not be managed by Spring
+23-11-24 18:33:24.485 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:33:24.486 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:33:24.507 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:33:24.508 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2034d644]
+23-11-24 18:33:31.133 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:33:31.134 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36abc677] was not registered for synchronization because synchronization is not active
+23-11-24 18:33:31.303 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@710fa8b8] will not be managed by Spring
+23-11-24 18:33:31.306 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:33:31.309 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:33:31.335 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:33:31.336 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36abc677]
+23-11-24 18:33:32.558 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:33:32.559 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b1360d6] was not registered for synchronization because synchronization is not active
+23-11-24 18:33:32.863 DEBUG [io-8080-exec-15] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@5afcc7cb] will not be managed by Spring
+23-11-24 18:33:32.864 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:33:32.865 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:33:32.906 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:33:32.907 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b1360d6]
+23-11-24 18:33:38.445 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:33:38.445 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12008672] was not registered for synchronization because synchronization is not active
+23-11-24 18:33:38.633 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@4b61ae] will not be managed by Spring
+23-11-24 18:33:38.634 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:33:38.635 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:33:38.657 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:33:38.658 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12008672]
+23-11-24 18:34:14.803 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:14.804 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41987623] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:15.205 DEBUG [io-8080-exec-12] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@5dfcfdc] will not be managed by Spring
+23-11-24 18:34:15.209 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:15.214 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:34:15.249 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:34:15.251 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41987623]
+23-11-24 18:34:16.965 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:16.965 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17edf80d] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:17.373 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@771e00c2] will not be managed by Spring
+23-11-24 18:34:17.374 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:17.379 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:34:17.401 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:34:17.402 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17edf80d]
+23-11-24 18:34:25.362 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:25.362 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@787b6562] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:25.755 DEBUG [io-8080-exec-20] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@1ad652b2] will not be managed by Spring
+23-11-24 18:34:25.760 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:25.767 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:34:25.797 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:34:25.798 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@787b6562]
+23-11-24 18:34:27.578 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:27.580 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d9d4898] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:27.885 DEBUG [io-8080-exec-14] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@1bdfb7fb] will not be managed by Spring
+23-11-24 18:34:27.886 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:27.887 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:34:27.909 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:34:27.910 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d9d4898]
+23-11-24 18:34:30.226 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:30.227 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@473c0c85] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:30.574 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@da7cafa] will not be managed by Spring
+23-11-24 18:34:30.575 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:30.576 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:34:30.607 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:34:30.608 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@473c0c85]
+23-11-24 18:34:34.144 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:34.145 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76eb1932] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:34.544 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@51d748a0] will not be managed by Spring
+23-11-24 18:34:34.545 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:34.545 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:34:34.569 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:34:34.571 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76eb1932]
+23-11-24 18:34:36.310 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:36.310 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@214f437f] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:36.724 DEBUG [io-8080-exec-13] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@1de4a9e2] will not be managed by Spring
+23-11-24 18:34:36.724 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:36.725 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:34:36.758 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:34:36.759 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@214f437f]
+23-11-24 18:34:38.527 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:38.527 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c1b67f] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:38.864 DEBUG [io-8080-exec-11] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@68b84701] will not be managed by Spring
+23-11-24 18:34:38.866 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:38.877 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:34:38.909 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:34:38.913 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28c1b67f]
+23-11-24 18:34:54.818 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:54.818 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c798025] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:55.180 DEBUG [io-8080-exec-12] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@326f9f7b] will not be managed by Spring
+23-11-24 18:34:55.180 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:55.182 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:34:55.218 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:34:55.219 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c798025]
+23-11-24 18:34:56.019 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:56.021 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43b5866c] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:56.214 DEBUG [io-8080-exec-14] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@165ea59e] will not be managed by Spring
+23-11-24 18:34:56.215 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:56.216 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:34:56.248 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:34:56.249 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43b5866c]
+23-11-24 18:34:58.430 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:34:58.432 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c622544] was not registered for synchronization because synchronization is not active
+23-11-24 18:34:58.806 DEBUG [io-8080-exec-11] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@197e3945] will not be managed by Spring
+23-11-24 18:34:58.808 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:34:58.816 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:34:58.840 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:34:58.841 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c622544]
+23-11-24 18:37:58.157 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:37:58.158 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14e7d772] was not registered for synchronization because synchronization is not active
+23-11-24 18:37:58.507 DEBUG [io-8080-exec-14] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@531e7535] will not be managed by Spring
+23-11-24 18:37:58.511 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:37:58.517 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:37:58.565 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:37:58.567 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@14e7d772]
+23-11-24 18:37:59.966 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:37:59.967 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32b4f49f] was not registered for synchronization because synchronization is not active
+23-11-24 18:38:00.215 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@75d9a6c7] will not be managed by Spring
+23-11-24 18:38:00.216 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:38:00.218 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:38:00.237 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:38:00.237 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@32b4f49f]
+23-11-24 18:38:23.998 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:38:23.999 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9eaa26] was not registered for synchronization because synchronization is not active
+23-11-24 18:38:24.306 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@77a24047] will not be managed by Spring
+23-11-24 18:38:24.307 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:38:24.309 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:38:24.328 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:38:24.329 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e9eaa26]
+23-11-24 18:38:25.298 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:38:25.298 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d513497] was not registered for synchronization because synchronization is not active
+23-11-24 18:38:25.487 DEBUG [io-8080-exec-12] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@24ea2b74] will not be managed by Spring
+23-11-24 18:38:25.489 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:38:25.490 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:38:25.524 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:38:25.525 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d513497]
+23-11-24 18:38:33.250 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:38:33.251 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@375c04b3] was not registered for synchronization because synchronization is not active
+23-11-24 18:38:33.676 DEBUG [io-8080-exec-13] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@73c21ff4] will not be managed by Spring
+23-11-24 18:38:33.677 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:38:33.678 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:38:33.699 DEBUG [io-8080-exec-13] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:38:33.700 DEBUG [io-8080-exec-13] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@375c04b3]
+23-11-24 18:38:34.847 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:38:34.848 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@798d3e02] was not registered for synchronization because synchronization is not active
+23-11-24 18:38:35.226 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@25b3a892] will not be managed by Spring
+23-11-24 18:38:35.227 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:38:35.228 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:38:35.260 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:38:35.261 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@798d3e02]
+23-11-24 18:39:07.095 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:39:07.096 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38ad7bbe] was not registered for synchronization because synchronization is not active
+23-11-24 18:39:07.338 DEBUG [io-8080-exec-11] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@f56034c] will not be managed by Spring
+23-11-24 18:39:07.339 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:39:07.341 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:39:07.370 DEBUG [io-8080-exec-11] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:39:07.371 DEBUG [io-8080-exec-11] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38ad7bbe]
+23-11-24 18:39:12.003 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:39:12.003 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e08c25e] was not registered for synchronization because synchronization is not active
+23-11-24 18:39:12.196 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@8a14396] will not be managed by Spring
+23-11-24 18:39:12.197 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:39:12.198 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:39:12.216 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:39:12.217 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e08c25e]
+23-11-24 18:39:13.350 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:39:13.351 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a8dc154] was not registered for synchronization because synchronization is not active
+23-11-24 18:39:13.646 DEBUG [io-8080-exec-20] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@62205fb1] will not be managed by Spring
+23-11-24 18:39:13.647 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:39:13.648 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:39:13.680 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:39:13.680 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a8dc154]
+23-11-24 18:39:40.450 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:39:40.450 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c87c8ed] was not registered for synchronization because synchronization is not active
+23-11-24 18:39:40.756 DEBUG [io-8080-exec-15] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@2c1b35a2] will not be managed by Spring
+23-11-24 18:39:40.757 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:39:40.759 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:39:40.777 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:39:40.790 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c87c8ed]
+23-11-24 18:40:06.229 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:40:06.230 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@623a48c2] was not registered for synchronization because synchronization is not active
+23-11-24 18:40:06.597 DEBUG [io-8080-exec-12] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@75435aa7] will not be managed by Spring
+23-11-24 18:40:06.597 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:40:06.598 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:40:06.617 DEBUG [io-8080-exec-12] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:40:06.618 DEBUG [io-8080-exec-12] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@623a48c2]
+23-11-24 18:40:09.201 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:40:09.203 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5be9122d] was not registered for synchronization because synchronization is not active
+23-11-24 18:40:09.387 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@700c96fd] will not be managed by Spring
+23-11-24 18:40:09.389 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:40:09.390 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:40:09.558 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:40:09.559 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5be9122d]
+23-11-24 18:40:48.435 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:40:48.435 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@b3e8e0a] was not registered for synchronization because synchronization is not active
+23-11-24 18:40:48.697 DEBUG [io-8080-exec-16] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@3091f988] will not be managed by Spring
+23-11-24 18:40:48.697 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:40:48.698 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:40:48.717 DEBUG [io-8080-exec-16] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:40:48.718 DEBUG [io-8080-exec-16] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@b3e8e0a]
+23-11-24 18:40:52.137 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:40:52.139 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f7b953] was not registered for synchronization because synchronization is not active
+23-11-24 18:40:52.307 DEBUG [io-8080-exec-15] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@601cf28f] will not be managed by Spring
+23-11-24 18:40:52.310 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:40:52.311 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:40:52.328 DEBUG [io-8080-exec-15] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:40:52.330 DEBUG [io-8080-exec-15] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f7b953]
+23-11-24 18:41:03.666 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:41:03.667 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@777bf17] was not registered for synchronization because synchronization is not active
+23-11-24 18:41:03.897 DEBUG [io-8080-exec-20] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@61ef1002] will not be managed by Spring
+23-11-24 18:41:03.898 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:41:03.899 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:41:03.918 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:41:03.918 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@777bf17]
+23-11-24 18:41:07.242 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:41:07.242 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@aa52924] was not registered for synchronization because synchronization is not active
+23-11-24 18:41:07.407 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@1e54a6f5] will not be managed by Spring
+23-11-24 18:41:07.408 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:41:07.409 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:41:07.428 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:41:07.428 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@aa52924]
+23-11-24 18:42:31.205 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:42:31.208 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68af9834] was not registered for synchronization because synchronization is not active
+23-11-24 18:42:31.397 DEBUG [io-8080-exec-14] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@2f5d828c] will not be managed by Spring
+23-11-24 18:42:31.397 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:42:31.398 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:42:31.420 DEBUG [io-8080-exec-14] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:42:31.421 DEBUG [io-8080-exec-14] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68af9834]
+23-11-24 18:42:35.915 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:42:35.916 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@305428d2] was not registered for synchronization because synchronization is not active
+23-11-24 18:42:36.077 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@704e4185] will not be managed by Spring
+23-11-24 18:42:36.078 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:42:36.081 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:42:36.098 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:42:36.099 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@305428d2]
+23-11-24 18:42:50.465 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:42:50.466 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@405066f8] was not registered for synchronization because synchronization is not active
+23-11-24 18:42:50.737 DEBUG [io-8080-exec-18] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@28798a95] will not be managed by Spring
+23-11-24 18:42:50.738 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:42:50.738 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:42:50.760 DEBUG [io-8080-exec-18] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:42:50.764 DEBUG [io-8080-exec-18] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@405066f8]
+23-11-24 18:42:53.203 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:42:53.204 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63b4b51] was not registered for synchronization because synchronization is not active
+23-11-24 18:42:53.417 DEBUG [io-8080-exec-17] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@533022cc] will not be managed by Spring
+23-11-24 18:42:53.418 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:42:53.419 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:42:53.456 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:42:53.456 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63b4b51]
+23-11-24 18:43:23.168 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:43:23.169 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28cdd8d1] was not registered for synchronization because synchronization is not active
+23-11-24 18:43:23.567 DEBUG [io-8080-exec-17] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@582d4029] will not be managed by Spring
+23-11-24 18:43:23.568 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:43:23.569 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 1(String)
+23-11-24 18:43:23.592 DEBUG [io-8080-exec-17] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 3
+23-11-24 18:43:23.593 DEBUG [io-8080-exec-17] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28cdd8d1]
+23-11-24 18:43:24.753 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-11-24 18:43:24.754 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2aaf0695] was not registered for synchronization because synchronization is not active
+23-11-24 18:43:24.917 DEBUG [io-8080-exec-20] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@22562de3] will not be managed by Spring
+23-11-24 18:43:24.918 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==>  Preparing: select * from com_mbx_contents WHERE menu_id = ? AND content_type = ? 
+23-11-24 18:43:24.919 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : ==> Parameters: MN001(String), 2(String)
+23-11-24 18:43:24.952 DEBUG [io-8080-exec-20] mbxvoid.SELECT_COM_MBX_CONTENTS                             (139) : <==      Total: 9
+23-11-24 18:43:24.955 DEBUG [io-8080-exec-20] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2aaf0695]
+23-11-24 18:43:55.263 DEBUG [alina-utility-1] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+23-11-24 18:44:17.185 DEBUG [alina-utility-2] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.

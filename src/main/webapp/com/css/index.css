@@ -59,8 +59,9 @@
     cursor: pointer;
 }
 .hidden{
-    display: none;
+    display: none !important;
     width: 0%;
+    transition : all 1s;
 }
 *{ margin: 0px;padding: 0px;}
 .display-flex{
