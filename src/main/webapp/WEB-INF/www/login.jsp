@@ -16,7 +16,7 @@
 	<body>
 	    <div id="world_body" class="display-flex">
 	        <section class="login_box-section display-flex">
-	            <article class="login_box display-flex">
+	            <article class="login_box display-flex flex-direction-column">
 	                <div class="login_box-layer display-flex">
 	                    <div class="user_box-title display-flex">
 	                        <h1>Sign In to Login</h1>
@@ -28,15 +28,18 @@
 	                                <form id="LOGIN_FORM">
 	                                    <input id="login_id" class="required hidden row-percent-65 input_basic_placeholder" type="text"  autocomplete="off">
 	                                </form>
-	                                </div>
-	                                <label for="icon-sign_in-button">
-		                                <button type="button" id="icon-sign_in-button">
-		                                    <i class="fas fa-chevron-circle-right"></i>
-		                                </button>
-	                                </label>
 	                            </div>
-	                        </div>
+	                            <label for="icon-sign_in-button">
+		                            <button type="button" id="icon-sign_in-button">
+		                            	<i class="fas fa-chevron-circle-right"></i>
+		                        	</button>
+	                            </label>
+	                    	</div>
+	                    </div>
 	                </div>
+	                <article>
+	           			<div id="guest_login" class="cursor-pointer">GUEST LOGIN</div>
+	           		</article>
 	           </article>
 	        </section>
 	    </div>
@@ -47,4 +50,32 @@
 <script src="/com/js/common.js"></script>
 
 <script>
+$("#guest_login").click(function(){
+	guestLogin();
+})
+function guestLogin(){
+	var mebx = new Mebx();
+	var path = '/login.do?command=loginCheck';
+    $.ajax({
+    	type:"POST",
+    	url : path,
+    	data: JSON.stringify({
+    		user_id : "guest"
+    	}),
+    	contentType : "application/json; charset=utf-8",
+    	dataType : "json",
+    	success : function(data){
+    		if(data){
+    			window.location.href="/page.do?command=goMainPage";
+    		}else{
+	    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
+    		}
+    	},
+    	error : function(){
+    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
+    		
+    	}
+    	
+    });
+}
 </script>

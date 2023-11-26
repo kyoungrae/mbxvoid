@@ -123,7 +123,7 @@ function insetSkillsLayer(cont){
 			}
 			
 			title = cont[0].content_title;
-			html += '<div class="pf-skills-box-title col-percent-25 ">'
+			html += '<div class="pf-skills-box-title col-percent-30">'
                 +'<div class="pf-skills-subtitle">'+cont[i].content_parts_1+'</div>'
                 +'<div class="pf-skills-content-box">'
                     +skillTypeHtml
@@ -180,7 +180,7 @@ function insertContentLayer(cont){
 										 +'</div>'
 										 +'<div class="pf-wep-box-contentlayer pf-wep-box-Realization">'
 										 	+'<div class="pf-wep-Realization-title">'
-										 		+'<p>[ 느낀점 ]</p>'
+										 		+'<p></p>'
 										 	+'</div>'
 										 	+'<div class="margin-top-10px pf-wep-Realization word-break-keep-all">'
 										 		+'<p>'+cont[i].content_2+'</p>'

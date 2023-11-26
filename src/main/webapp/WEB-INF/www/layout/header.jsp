@@ -5,16 +5,16 @@
                 <div class="memu_info col-percent-70 display-flex" >
                     <ul class="menu_info_box col-percent-100 display-flex">
                     	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=portfolio">경력기술서</a></li>
-                    	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=schedule">일정</a></li>
+<!--                     	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=schedule">일정</a></li> -->
                     </ul>
                 </div>
-                <div class="user_info col-percent-20" >
+                <div class="user_info" >
                     <div class="user_info_box col-percent-50 row2-percent-100 float-right display-flex ">
                         <div class="user_info_icon"><i class="fa-solid fa-user"></i></div>
-                        <div id="user_nm_box" class="user_nm">이경태</div>
+                        <div id="user_nm_box" class="user_nm">guest</div>
                         <div class="user_info_box-sub display-flex">
-                            <article class="my_info cursor-pointer display-flex">내정보1</article>
-                            <article class="my_info cursor-pointer display-flex">내정보2</article>
+<!--                             <article class="my_info cursor-pointer display-flex">내정보1</article> -->
+<!--                             <article class="my_info cursor-pointer display-flex">내정보2</article> -->
                             <article id="logout" class="my_info cursor-pointer display-flex">로그아웃</article>
                         </div>
                         <div class="bar_box cursor-pointer" data-active-click="false"  data-infobox-show="false">

@@ -13,7 +13,8 @@ public class PageMoveController {
 	   @RequestMapping(params = "command=goMainPage")
 	    public ModelAndView goMainPage() {
 	    	ModelAndView modelAndView = new ModelAndView();
-	        modelAndView.setViewName("layer.contentpage.main");
+//	        modelAndView.setViewName("layer.contentpage.main");
+	        modelAndView.setViewName("layer.contentpage.portfolio");
 	        return modelAndView;
 	    }
 	   
