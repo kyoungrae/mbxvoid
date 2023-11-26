@@ -52,6 +52,7 @@
 
 
 /* 기본 css ---------------------------------------------------------------------------------*/
+*{ margin: 0px;padding: 0px;}
 .word-break-keep-all{
     word-break: keep-all;
 }
@@ -63,7 +64,6 @@
     width: 0%;
     transition : all 1s;
 }
-*{ margin: 0px;padding: 0px;}
 .display-flex{
     display: flex;
     font-family: 'Noto Sans KR', sans-serif;
@@ -72,6 +72,9 @@
     width: 100vw;
     height: 100vh;
     align-items: center;
+}
+#main_world_body{
+	overflow: scroll;
 }
 .float-right{
     float: right;
@@ -612,7 +615,6 @@ a{
     margin: 30px 0;
     min-width: 90%;
 }
-
 
 /* 포트폴리오 -----------------------------------------------------------------------------*/
 

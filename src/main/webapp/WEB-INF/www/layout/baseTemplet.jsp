@@ -4,8 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MBXVOID</title>
-</head>
+<title>MBXVOID</title>
+<link rel="shortcut icon" href="#">
 <link rel="stylesheet" href="/com/css/index.css">
 <link href="/com/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
 <link href="/com/assets/fontawesome/css/all.css" rel="stylesheet">
@@ -13,6 +13,7 @@
 <link href="/com/assets/fontawesome/css/brands.css" rel="stylesheet">
 <link href="/com/assets/fontawesome/css/v4-font-face.css" rel="stylesheet">
 <script src="/com/js/jquery/jquery-3.6.0.min.js"></script>
+</head>
 <body>
  	<div id="main_world_body" class="col-percent-100">
 	        <tiles:insertAttribute name="header" />

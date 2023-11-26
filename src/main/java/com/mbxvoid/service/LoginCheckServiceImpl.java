@@ -3,6 +3,8 @@ package com.mbxvoid.service;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
@@ -33,6 +35,15 @@ public class LoginCheckServiceImpl implements LoginCheckService{
 			e.printStackTrace();
 		}
 		return flag;
+	}
+
+	@Override
+	public void sessionSetting(HttpServletRequest req, UserInfoDto bean) throws Exception {
+		HttpSession session = req.getSession();
+		session.setAttribute("sessionId", session.getId());
+    	session.setAttribute("userId", bean.getUser_id());
+    	System.out.println(session.getAttribute("sessionId"));
+    	System.out.println(session.getAttribute("userId"));
 	}
 	
 }

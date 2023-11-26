@@ -1,13 +1,13 @@
 package com.mbxvoid.bean;
 
 public class UserInfoDto {
-	String user_id;
-	String user_nm;
-	String user_pw;
-	String user_en_nm;
+	private String user_id;
+	private String user_nm;
+	private String user_pw;
+	private String user_en_nm;
 	
-	String sys_cr_dt;
-	String sys_ud_dt;
+	private String sys_cr_dt;
+	private String sys_ud_dt;
 	
 	public String getUser_id() {
 		return user_id;
