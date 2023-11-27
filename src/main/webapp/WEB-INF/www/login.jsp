@@ -15,7 +15,8 @@
 <html>
 	<body>
 	    <div id="world_body" class="display-flex">
-	        <section class="login_box-section display-flex">
+	        <section class="login_box-section display-flex flex-direction-column">
+            	<div class="logo_text">MBXVOID</div>
 	            <article class="login_box display-flex flex-direction-column">
 	                <div class="login_box-layer display-flex">
 	                    <div class="user_box-title display-flex">
@@ -39,6 +40,8 @@
 	                </div>
 	                <article>
 	           			<div id="guest_login" class="cursor-pointer">GUEST LOGIN</div>
+	           			
+	           			
 	           		</article>
 	           </article>
 	        </section>

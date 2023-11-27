@@ -2,8 +2,8 @@
 <div class="section_body display-flex">
 	<section class="world_content_body col-percent-100 display-flex flex-direction-column">
         <article class="pf-article col-percent-100  display-flex justify-content-center flex-direction-column align-items-center margin-top-10percent">
-                    <div class="pf-title col-percent-20 row-percent-20  display-flex justify-content-center slide-in-top">
-                        <p>VOID</p>
+                    <div class="pf-title col-percent-20 row-percent-20  display-flex justify-content-center">
+                        <p class="logo_text">VOID</p>
                     </div>
                     <div class="pf-title-content col-percent-100 row-percent-20  display-flex justify-content-center">
                         

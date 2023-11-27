@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
  <section class="world_top col-percent-100 row-px-50 display-flex">
             <div class="world_top-box col-percent-90 display-flex">
-                <div class="logo col-percent-10 text_align-center display-flex" ><a href="/page.do?command=goMainPage">HOME</a></div>
+                <div class="logo col-percent-15 text_align-center display-flex" ><a href="/page.do?command=goMainPage">HOME</a></div>
                 <div class="memu_info col-percent-70 display-flex" >
                     <ul class="menu_info_box col-percent-100 display-flex">
                     	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=portfolio">경력기술서</a></li>
 <!--                     	<li class="cursor-pointer"><a href="/page.do?command=movePage&menu_nm=schedule">일정</a></li> -->
                     </ul>
                 </div>
-                <div class="user_info" >
+                <div class="user_info col-percent-15">
                     <div class="user_info_box col-percent-50 row2-percent-100 float-right display-flex ">
                         <div class="user_info_icon"><i class="fa-solid fa-user"></i></div>
                         <div id="user_nm_box" class="user_nm">guest</div>

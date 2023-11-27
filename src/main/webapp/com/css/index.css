@@ -52,7 +52,6 @@
 
 
 /* 기본 css ---------------------------------------------------------------------------------*/
-*{ margin: 0px;padding: 0px;}
 .word-break-keep-all{
     word-break: keep-all;
 }
@@ -60,10 +59,10 @@
     cursor: pointer;
 }
 .hidden{
-    display: none !important;
+    display: none;
     width: 0%;
-    transition : all 1s;
 }
+*{ margin: 0px;padding: 0px;}
 .display-flex{
     display: flex;
     font-family: 'Noto Sans KR', sans-serif;
@@ -72,9 +71,6 @@
     width: 100vw;
     height: 100vh;
     align-items: center;
-}
-#main_world_body{
-	overflow: scroll;
 }
 .float-right{
     float: right;
@@ -130,8 +126,8 @@ a{
     height: 90%;
     align-items:center;
     justify-content: center;
-    border: 1px solid #efefef;
-    border-radius: 0 40px 40px 0;
+    border: 2px solid #ffffff;
+    border-radius:40px;
 }
 .login_box-layer{
     width: 90%;    
@@ -189,6 +185,7 @@ a{
 }
 #login_id{
     border: unset;
+    background:none;
 }
 #login_id:focus-visible{
    outline: unset;
@@ -240,11 +237,59 @@ a{
 #LOGIN_FORM{
     width:130px;
 }
-#guest_login:hover{
-	color:#805aff;
-	font-weight:bold;
+@font-face {
+  font-family:'Decovar Regular24'; 
+  src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf');
+}
+body{
+    background-color: rgba(160, 160, 160, 0.1);
+}
+.logo_text {
+  margin: 0;
+  font-family: "Decovar Regular24"; 
+  font-size: 4rem;
+  color: rgb(255, 255, 255); 
+  font-variation-settings: 'SSTR' 1000;
+  animation: loadin 4s infinite linear;
+}
+
+@keyframes loadin {
+  0% {
+    font-variation-settings: 'SSTR' 1000;
+  }
+  50% {
+    font-variation-settings: 'SSTR' 0;
+  }
+}
+.logo_text{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, .7),
+    1px -1px 0 rgba(255, 255, 255, .7), 
+    -1px 1px 0 rgba(255, 255, 255, .7), 
+    1px 1px 0 rgba(255, 255, 255, .7), 
+    -1px 2px 1px rgba(160, 160, 160, .7),
+    -2px 4px 2px rgba(160, 160, 160, .7),
+    -3px 6px 3px rgba(160, 160, 160, .6),
+    -4px 8px 4px rgba(160, 160, 160, .5),
+    -5px 10px 5px rgba(160, 160, 160, .4),
+    -6px 12px 6px rgba(160, 160, 160, .3);
+}
+#guest_login{
+	font-weight: bord;
 	transition: all 0.4s;
 }
+#guest_login:hover{
+	transform : scale(1.3);
+}
+
 /* 로그인 페이지 ---------------------------------------------------------------------------------*/
 
 /* 메인 페이지 ---------------------------------------------------------------------------------*/
@@ -252,7 +297,7 @@ a{
     position: sticky;
     top: 0px;
     z-index: 1;
-    background-color: #d6d6d613;
+    background-color: #99999913;
     background-blend-mode: color;
     backdrop-filter: blur(3px);
     justify-content: center;
@@ -335,8 +380,7 @@ a{
 }
 .bar_box{
     display: flex;
-/*     width: 30%; */
-	width:150px;
+    width: 30%;
     height: 100%;
     justify-content: center;
     transition: all 0.2s;
@@ -543,9 +587,9 @@ a{
     border-radius: 5px;
     position:relative;
 }
-.pf-skills{
-    background:linear-gradient(344deg, rgb(209, 209, 209), rgb(168, 168, 168) 40%, white 40%, white);
-}
+/* .pf-skills{ */
+/*     background:linear-gradient(344deg, rgb(209, 209, 209), rgb(168, 168, 168) 40%, white 40%, white); */
+/* } */
 .pf-wep{
     box-shadow: 0px 8px 8px #0000003b;
     box-sizing: border-box;
@@ -622,5 +666,5 @@ a{
     min-width: 100%;
 }
 
-/* 포트폴리오 -----------------------------------------------------------------------------*/
 
+/* 포트폴리오 -----------------------------------------------------------------------------*/
