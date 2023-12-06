@@ -1,6 +1,5 @@
 $(function(){
     var mebx = new Mebx();
-	
     // 로그인 박스 입력시 아이콘 색 변경
     $(".loginButton-box-fram").keyup(function(){
         

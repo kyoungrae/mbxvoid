@@ -1,201 +1,189 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div class="section_body display-flex">
-	<section class="world_content_body col-percent-100 display-flex flex-direction-column">
-        <article class="pf-article col-percent-100  display-flex justify-content-center flex-direction-column align-items-center margin-top-10percent">
-                    <div class="pf-title col-percent-20 row-percent-20  display-flex justify-content-center">
-                        <p class="logo_text">VOID</p>
+ <div class="main-body">
+    <section class="main-content">
+        <article class="main-content-title-box">
+            <div class="main-content-path"><span>Project/OverView</span></div>
+            <span class="main-content-title">OverView</span>
+        </article>
+        <article class="main-content-nav_tab">
+            <ul class="main-content-nav display-flex">
+                <li class="main-content-nav-items nav_active">
+                    <a class="nav-link" href="javascript:void(0);">
+                        Project
+                        <span class="nav-total_text nav-link-sub"></span>
+                    </a>
+                </li>
+                <li class="main-content-nav-items">
+                    <a class="nav-link" href="javascript:void(0);">TimeLine</a>
+                </li>
+            </ul>
+        </article>
+        <article class="main-contents main-content-total-box display-flex align-items-center">
+            <div class="main-content-total">
+                <span class="total_text"></span>
+            </div>
+            <div class="col-percent-15">
+                <span class="total_text_sub">Total project</span>
+            </div>
+            <div class="main-content-total-progressbar-box col-percent-100">
+                <div class="main-content-total-progressbar-text">
+                    <ul class="progressbar-box display-flex">
+                        <li class="inprogress-text"><span>In progress</span><span>(1)</span></li>
+                        <li class="completed-text"><span>Completed</span>(9)</li>
+                        <li class="todo-text"><span>To do</span>(0)</li>
+                    </ul>
+                    <div class="main-content-total-progressbar display-flex">
+                        <div class="inprogress col-percent-20"></div>
+                        <div class="completed col-percent-80"></div>
+                        <div class="todo"></div>
                     </div>
-                    <div class="pf-title-content col-percent-100 row-percent-20  display-flex justify-content-center">
-                        
-                    </div>
-                    <div class="pf-skills hidden col-percent-80 display-flex flex-direction-column margin-top-10percent">
-                        <div class="pf-content-title pf-skills-title row-percent-30">
-                            <p>Skills</p>
-                        </div>
-                        <div class="pf-skills-box display-flex">
-                            
-                        </div>
-                    </div>
-					<div class="pf-wep hidden col-percent-80 display-flex flex-direction-column align-items-center margin-top-10percent">
-						 <div class="pf-content-title pf-wep-title row-percent-100 col-percent-90">
-						 	<p></p>
-						 </div>
-                   </div>
-                </article>
+                </div>
+            </div>
+        </article>
+        <article class="main-contents main-content-contents"> 
+            <div class="main-content-contents-nav display-flex">
+                <input class="col-percent-5" type="checkbox" name="project_name">
+                <div class="project-status-box col-percent-95">
+                    <ul class="project-status display-flex col-percent-100">
+                        <li class="col-percent-30">PROJECT</li>
+                        <li class="col-percent-20">COMPANY</li>
+                        <li class="col-percent-10">MEMBER</li>
+                        <li class="col-percent-15">STATUS</li>
+                        <li class="col-percent-20">COMPLETION</li>
+                        <li class="col-percent-5">FILE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="append-main-content-projects"></div>
+        </article>
     </section>
+    <article id="view-popup" class="hidden">
+        <div class="view-popup-body-box">
+            <div class="view-popup-body row-percent-90">
+                <div class="view-popup_title col-percent-100 row-percent-10">
+                    <span id="view-prj_nm">POMA - LMS</span>
+                </div>
+                <div class="display-flex flex-direction-column">
+                    <div class="view-popup-contents">
+                        <span class="view-popup-content_title">발주처</span>
+                        <span id="view-company" class="view-popup-content_text"></span>
+                    </div>
+                    <div class="view-popup-contents view-popup_period">
+                        <span class="view-popup-content_title">기간</span>
+                        <span id="view-period" class="view-popup-content_text"></span>
+                    </div>
+                    <div class="view-popup-contents">
+                        <span class="view-popup-content_title">참여인원</span>
+                        <span id="view-member" class="view-popup-content_text"></span>
+                    </div>
+                    <div class="view-popup-contents">
+                        <span class="view-popup-content_title">기여도</span>
+                        <span id="view-contribution" class="view-popup-content_text"></span>
+                    </div>
+                </div>
+                <div class="view-popup-contents">
+                    <span class="view-popup-content_title">사용기술</span>
+                    <span id="view-skill" class="view-popup-content_text dis"></span>
+                </div>
+                <div class="view-popup-contents">
+                    <span class="view-popup-content_title">담당업무</span>
+                    <span id="view-assigned_task" class="view-popup-content_text"></span>
+                </div>
+                <div class="view-popup-contents">
+                    <span class="view-popup-content_title">내용</span>
+                    <span id="view-cont" class="view-popup-content_text"></span>
+                </div>
+            </div>
+            <footer class="view-popup-footer row-percent-10">
+                <button class="btn view-popup_close" type="button"><i class="fa-solid fa-xmark">닫기</i></button>
+            </footer>
+        </div>
+    </article>
 </div>
 <script>
-window.onload = function(){
-// 	$("html, body").animate({ scrollTop: 0 }, 300);
-	
-// 	var addedDynamicContent = false;
-// 	var addedSkillsContentsFlag = false;
-// 	var addedContentsFlag = false;
-	$(".pf-skills").removeClass("hidden");
-	$(".pf-wep").removeClass("hidden");
-	var html = '<p class="word-break-keep-all">끊임없는 발전이 반환 없이 펼쳐지는 여정이며,<br>어떤 공백도 나의 성장을 막을 수 없다.<br> 코드의 공백을 나만의 경험으로 메우며 더 나은 나로 성장할 것이다.</p>';
-		$(".pf-title-content").html(html);   
-	searchSkillsContents();
-	searchContents();
-}
-
-// addedDynamicContent = false;
-// addedSkillsContentsFlag = false;
-// addedContentsFlag = false;
-
-// $(window).scroll(function() {
-// 	    if(!addedDynamicContent && $(this).scrollTop() >= 200){
-// 	    	var html = '<p class="word-break-keep-all">끊임없는 발전이 반환 없이 펼쳐지는 여정이며,<br>어떤 공백도 나의 성장을 막을 수 없다.<br> 코드의 공백을 나만의 경험으로 메우며 더 나은 나로 성장할 것이다.</p>';
-// 			$(".pf-title-content").html(html);   
-// 			$(".pf-title-content p").addClass("tracking-in-expand-fwd");   
-			
-// 			addedDynamicContent = true;
-// 	    }
-// 	    if(!addedSkillsContentsFlag &&  $(this).scrollTop() >= 350){
-// 	    	$(".pf-skills").removeClass("hidden");
-// 	    	searchSkillsContents();
-// 	    	addedSkillsContentsFlag = true;
-// 	    }
-	    
-// 	    if(!addedContentsFlag && $(this).scrollTop() >= 1000){
-// 	    	$(".pf-wep").removeClass("hidden");
-// 	    	searchContents();
-// 	    	addedContentsFlag = true;
-// 	    }
-// });
-	
+$(document).ready(function() {
+    searchContents();
+})
+var data_obj = [];
 function searchContents(){
-	var mebx = new Mebx();
-	var path = '/contents.do?command=searchContentsInfo';
     $.ajax({
-    	type:"POST",
-    	url : path,
-    	data: JSON.stringify({
-    		menu_id : "MN001",
-    		content_type : "2"
-    	}),
-    	contentType : "application/json; charset=utf-8",
-    	dataType : "json",
-    	success : function(data){
-    		
-    		insertContentLayer(data)
-    	},
-    	error : function(){
-    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
-    		
-    	}
-    	
+    type: "POST",
+    url: "/project.do?command=searchProject",
+    data: JSON.stringify({}),
+    contentType: "application/json; charset=utf-8",
+    dataType: "json"
+})
+    .done(function(data) {
+        // Success callback
+        data_obj = data;
+        console.log(data);
+        var contentsHtml = "";
+        for (var i = 0; i < data.length; i++) {
+        	if(data[i].status == "Inprogress"){
+        		status = "inprogress-text col-percent-15";
+        	}else if(data[i].status == "Completed"){
+        		status = "completed-text col-percent-15";
+        	}
+            contentsHtml += '<div class="main-content-projects display-flex">'
+                            + '<input class="col-percent-5" type="checkbox" name="project_name"/>'
+                            + '<div class="project-status-box col-percent-95">'
+                                + '<ul class="project-status display-flex col-percent-100">'
+                                    + '<li class="col-percent-30"><a class="view-popup_open" data-prj-no="'+data[i].prj_no+'" href="javascript:void(0)">'+data[i].prj_nm+'</a></li>'
+                                    + '<li class="col-percent-20"><span>'+data[i].company+'</span></li>'
+                                    + '<li class="col-percent-10"><span>'+data[i].member+'</span></li>'
+                                    + '<li class="'+status+'"><span>'+data[i].status+'</span></li>'
+                                    + '<li class="col-percent-20 display-flex align-items-center">'
+                                        + '<span class="display-block col-percent-30">'+data[i].completion+'</span>'
+                                        + '<div class="col-percent-70">'
+                                            + '<div class="completed col-percent-100"></div>'
+                                        + '</div>'
+                                    + '</li>'
+                                    + '<li class="col-percent-5"></li>'
+                                + '</ul>'
+                            + '</div>'
+                        + '</div>';
+        }
+        $(".total_text").append(data.length);
+        $(".nav-total_text").append(data.length);
+        $(".append-main-content-projects").append(contentsHtml);
+        var mebx = new Mebx();
+            mebx.nav_tab();
+            mebx.btn_popup_close();
+            // mebx.btn_popup_open();
+            btn_popup_open(data);
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        // Error callback
+        console.error("Error:", textStatus, errorThrown);
     });
 }
-function searchSkillsContents(){
-	var mebx = new Mebx();
-	var path = '/contents.do?command=searchContentsInfo';
-    $.ajax({
-    	type:"POST",
-    	url : path,
-    	data: JSON.stringify({
-    		menu_id : "MN001",
-    		content_type : "1"
-    	}),
-    	contentType : "application/json; charset=utf-8",
-    	dataType : "json",
-    	success : function(data){
-    		
-    		insetSkillsLayer(data)
-    	},
-    	error : function(){
-    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
-    		
-    	}
-    	
-    });
-}
-function insetSkillsLayer(cont){
-	var html = "";
-	var title = "";
-	for(var i = 0; i < cont.length; i++){
-		var skillTypeHtml = "";
-		if("MN001" == cont[i].menu_id && cont[i].content_type == "1"){
-			var skillType = (cont[i].content_sub_parts_1).split(",");
-			
-			for(var j = 0; j<skillType.length; j++){
-				skillTypeHtml +='<div class="pf-skills-content">'+skillType[j]+'</div>';
-			}
-			
-			title = cont[0].content_title;
-			html += '<div class="pf-skills-box-title col-percent-30">'
-                +'<div class="pf-skills-subtitle">'+cont[i].content_parts_1+'</div>'
-                +'<div class="pf-skills-content-box">'
-                    +skillTypeHtml
-                +'</div>'
-            +'</div>';
-		}
-	}
-	$(".pf-skills-box").append(html);
-	
-}
+function btn_popup_open(data){
+    $(".view-popup_open").click(function(){
+        var prj_no = $(this).data("prj-no");
+        for(var i =0; i< data.length; i++){
+            if(data[i].prj_no == prj_no){
+            	if(data[i].period_to == null){
+            		data[i].period_to = "진행중";
+            	}
+                $("#view-prj_nm").html(data[i].prj_nm);
+                $("#view-company").html(data[i].company);
+                $("#view-period").html(data[i].period_from+" - "+data[i].period_to);
+                $("#view-member").html(data[i].member);
+                $("#view-contribution").html(data[i].contribution+"%");
+                $("#view-skill").html(data[i].skill);
+                $("#view-assigned_task").html(data[i].assigned_task);
+                $("#view-cont").html(data[i].cont);
+                break;
+            }
+        }
+        if($("#view-popup").hasClass("hidden")){
+            $("#view-popup").removeClass("hidden");
+        }else{
+            $("#view-popup").addClass("hidden");
+        }
 
-function insertContentLayer(cont){
-	var innerHtml = "";
-	var contentTitle = "";
-	for(var i = 0; i < cont.length; i++){
-		if("MN001" == cont[i].menu_id && cont[i].content_type == "2"){
-			contentTitle = cont[0].content_title
-			innerHtml += '<div class="pf-common-content display-flex justify-content-center ">'
-									 +'<div class="pf-wep-box col-percent-90 row-percent-100">'
-										 +'<div class="pf-wep-box-title col-percent-100">'
-									 		+'<p>'+cont[i].content_sub_title+'</p>'
-										 +'</div>'
-									 	+'<div class="pf-wep-box-layer pf-wep-box-date col-percent-100">'
-										 +'<div class="pf-wep-date-title col-percent-50">'
-											 +'<p>'+cont[i].content_parts_1+'</p>'
-										 +'</div>'					 
-										 +'<div class="pf-wep-date col-percent-50">'
-										 	+'<p>'+cont[i].content_sub_parts_1+'</p>'
-										 +'</div>'
-									 	+'</div>'
-										 +'<div class="pf-wep-box-layer pf-wep-box-work col-percent-100">'
-										 	+'<div class="pf-wep-work-title col-percent-50">'
-										 		+'<p>'+cont[i].content_parts_2+'</p>'
-										 	+'</div>'
-											 +'<div class="pf-wep-work col-percent-50">'
-											 	+'<p>'+cont[i].content_sub_parts_2+'</p>'
-											 +'</div>'
-										 +'</div>'
-										 +'<div class="pf-wep-box-layer pf-wep-box-frame-work col-percent-100">'
-										 	+'<div class="pf-wep-frame-work-title col-percent-50">'
-										 		+'<p>'+cont[i].content_parts_3+'</p>'
-										 	+'</div>'
-										 	+'<div class="pf-wep-frame-work col-percent-50">'
-										 		+'<p>'+cont[i].content_sub_parts_3+'</p>'
-										 	+'</div>'
-										 +'</div>'
-										 +'<div class="pf-wep-box-contentlayer pf-wep-box-content">'
-										 	+'<div class="pf-wep-content-title">'
-										 		+'<p>[ 내용 ]</p>'
-										 	+'</div>'
-										 	+'<div class="margin-top-10px pf-wep-content word-break-keep-all">'
-										 		+'<p>'+cont[i].content_1+'</p>'
-										 	+'</div>'
-										 +'</div>'
-										 +'<div class="pf-wep-box-contentlayer pf-wep-box-Realization">'
-										 	+'<div class="pf-wep-Realization-title">'
-										 		+'<p></p>'
-										 	+'</div>'
-										 	+'<div class="margin-top-10px pf-wep-Realization word-break-keep-all">'
-										 		+'<p>'+cont[i].content_2+'</p>'
-										 	+'</div>'
-										 +'</div>'
-									 	+'</div>'
-								 +'</div>'
-							
-			}
-	}
-	
-	$(".pf-wep").append(innerHtml);
-	$(".pf-wep-title p").html(contentTitle);
+    })
 }
-
 
 
 </script>

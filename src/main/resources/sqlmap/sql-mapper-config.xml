@@ -16,5 +16,6 @@
 		<mapper resource="com/mbxvoid/handler/UserInfoHandler.xml"/>
 		<mapper resource="com/mbxvoid/handler/MenuInfoHandler.xml"/>
 		<mapper resource="com/mbxvoid/handler/ContentsInfoHandler.xml"/>
+		<mapper resource="com/mbxvoid/handler/ProjectHandler.xml"/>
 	</mappers>
 </configuration>

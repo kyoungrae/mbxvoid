@@ -1,4 +1,5 @@
-function Mebx(){}
+function Mebx(){
+}
 /*
  *   Mebx.showMessage
  *  화면 오른쪽 하단에 메세지 박스 표시
@@ -313,9 +314,20 @@ function addSchedule(year , month){
                             "target_yyyy":year
                             ,"target_mm":month
                             ,"target_dt":"21"
-                            ,"memo":"아아 테스트 중"
+                            ,"memo":"영이랑 점심약속"
+                        },
+                        {
+                            "target_yyyy":year
+                            ,"target_mm":month
+                            ,"target_dt":"20"
+                            ,"memo":"영이랑 점심약속"
+                        },
+                        {
+                            "target_yyyy":year
+                            ,"target_mm":month
+                            ,"target_dt":"22"
+                            ,"memo":"영이랑 점심약속"
                         }
-                       
                     ]; // 테이블 연동시 데이터 매핑 해줄 변수
     var mebx_schedule_data = ""; 
 
@@ -355,4 +367,46 @@ function nextMonth() {
     mebx.Calender(date);
 }
 
-   
+
+/*
+ * nav tab 
+ * */   
+
+Mebx.prototype.nav_tab = function(){
+    $(".nav-link").click(function(){
+        var parent = $(this).parent();
+        var active_flag = parent.hasClass("nav_active");
+
+        if(!active_flag){
+            $(".main-content-nav-items").removeClass("nav_active");
+            parent.addClass("nav_active");
+        }
+    });
+
+}
+/**
+ * view-popup_close  event
+ */
+Mebx.prototype.btn_popup_close = function(){
+    $(".view-popup_close").click(function(){
+        if(!$("#view-popup").hasClass("hidden")){
+            $("#view-popup").addClass("hidden");
+        }else{
+            $("#view-popup").removeClass("hidden");
+        }
+
+    })
+}
+Mebx.prototype.btn_popup_open = function(){
+    console.log("hihihi")
+    console.log($(".view-popup_open"))
+    $(".view-popup_open").click(function(){
+        console.log($("#view_popup").hasClass("hidden"))
+        if($("#view-popup").hasClass("hidden")){
+            $("#view-popup").removeClass("hidden");
+        }else{
+            $("#view-popup").addClass("hidden");
+        }
+
+    })
+}

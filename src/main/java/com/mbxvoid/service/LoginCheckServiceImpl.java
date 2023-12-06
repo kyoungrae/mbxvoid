@@ -36,14 +36,5 @@ public class LoginCheckServiceImpl implements LoginCheckService{
 		}
 		return flag;
 	}
-
-	@Override
-	public void sessionSetting(HttpServletRequest req, UserInfoDto bean) throws Exception {
-		HttpSession session = req.getSession();
-		session.setAttribute("sessionId", session.getId());
-    	session.setAttribute("userId", bean.getUser_id());
-    	System.out.println(session.getAttribute("sessionId"));
-    	System.out.println(session.getAttribute("userId"));
-	}
 	
 }

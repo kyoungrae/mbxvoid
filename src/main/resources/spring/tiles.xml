@@ -4,6 +4,7 @@
 <tiles-definitions>
     <definition name="layer.*.*" template="/WEB-INF/www/layout/baseTemplet.jsp">
         <put-attribute name="header" value="/WEB-INF/www/layout/header.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/www/layout/sidebar.jsp" />
         <put-attribute name="footer" value="/WEB-INF/www/layout/footer.jsp" />
         <put-attribute name="body" value="/WEB-INF/www/{1}/{2}.jsp" />
     </definition>

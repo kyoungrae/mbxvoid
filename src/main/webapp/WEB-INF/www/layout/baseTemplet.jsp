@@ -4,23 +4,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MBXVOID</title>
-<link rel="shortcut icon" href="#">
-<link rel="stylesheet" href="/com/css/index.css">
-<link href="/com/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/all.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/solid.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/brands.css" rel="stylesheet">
-<link href="/com/assets/fontawesome/css/v4-font-face.css" rel="stylesheet">
-<script src="/com/js/jquery/jquery-3.6.0.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width"/>
+    <title>MBX</title>
+    <link href="/com/css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="/com/css/index.css">
+	<link href="/com/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/all.css" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/solid.css" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/brands.css" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/v4-font-face.css" rel="stylesheet">
+    <script src="/com/js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/com/js/login.js"></script>
 </head>
 <body>
- 	<div id="main_world_body" class="col-percent-100">
+ 	<div class="main-layoutTag-body display-flex align-items-center flex-direction-column">
 	        <tiles:insertAttribute name="header" />
-	
+		<div class="main-layoutTag-contents display-flex">
+	        <tiles:insertAttribute name="sidebar" />
 	        <tiles:insertAttribute name="body" />
-	
-	        <tiles:insertAttribute name="footer" />
+		</div>
+<%-- 	        <tiles:insertAttribute name="footer" /> --%>
     </div>
 </body>
 <script src="/com/js/login.js"></script>

@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mbxvoid.bean.UserInfoDto;
 import com.mbxvoid.service.LoginCheckService;
+import com.mbxvoid.service.SessionCheckService;
+import com.mbxvoid.service.SessionCheckServiceImpl;
 
 
 @Controller
@@ -26,17 +29,19 @@ public class LoginCheckController {
     @Resource
     LoginCheckService logincheckservice;
     
+	@Resource
+	SessionCheckService sessionCheckservice;
+    
     @RequestMapping(params = "command=loginCheck")
     @ResponseBody
     public boolean loginCheck(@RequestBody UserInfoDto bean, HttpServletRequest req , HttpServletResponse res) {
     	
     	boolean flag = false;
-    	
 	    try {
 	    	flag = logincheckservice.loginCheck(bean);
-	    	if(flag) {
-	    		logincheckservice.sessionSetting(req, bean);
-	    	}
+	   	 
+	    	sessionCheckservice.setSession(req.getSession(), bean);
+	    	
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
