@@ -368,8 +368,6 @@
     font-size: 1rem;
     color: #898989;
 }
-
-
 @media screen and (max-width: 1280px){
     .total_text_sub{
         padding: 0rem 0.5rem;
@@ -381,6 +379,9 @@
     }
     .main-body{
         width: 100%;
+    }
+    .header-logo_text{
+        width: 43% !important;
     }
 }
 @media screen and (max-width: 795px){
@@ -395,6 +396,12 @@
    .completed-text{
         width: 200px !important;
    }
+}
+@media screen and (max-width: 760px){
+    .view-popup-body-box{
+        height: 70%;
+        width: 90%;
+    }
 }
 @media screen and (max-width: 727px){
    .main-content-total-box{
