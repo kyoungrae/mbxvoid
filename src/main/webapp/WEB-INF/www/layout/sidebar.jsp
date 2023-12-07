@@ -2,7 +2,7 @@
     <ol id="menuList">
         <li class="sidebar-mainMenu" id="menu1">
             <div class="sidebar-menuTitle cursor-pointer">
-                <i class="fa fa-file-signature"></i>
+                <i class="fa-solid fa-list-check"></i>
                 <a href=""><span>Projects</span></a>
             </div>
             <ul class="sidebar-submenu">

@@ -306,7 +306,7 @@
 }
 .view-popup-body-box{
     width: 60%;
-    min-height: 60%;
+    height: 80%;
     background-color: #fff;
     border-radius: 0.7rem;
     padding: 2.2rem;

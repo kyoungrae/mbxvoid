@@ -32,7 +32,6 @@
 </body>
 <script src="/com/js/common.js?20231207"></script>
 <script>
-
     $(function(){
         var mbx = new Mebx();
         mbx.Calender();
@@ -51,5 +50,6 @@
             }
         })
     })
+    
 </script>
 </html>

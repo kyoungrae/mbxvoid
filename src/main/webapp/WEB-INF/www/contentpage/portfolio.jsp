@@ -42,7 +42,7 @@
         </article>
         <article class="main-contents main-content-contents"> 
             <div class="main-content-contents-nav display-flex">
-                <input class="col-percent-5" type="checkbox" name="project_name">
+                <div class="col-percent-5"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div class="project-status-box col-percent-95">
                     <ul class="project-status display-flex col-percent-100">
                         <li class="col-percent-30">PROJECT</li>
@@ -127,7 +127,7 @@ function searchContents(){
         		statusbar = "completed col-percent-100";
         	}
             contentsHtml += '<div class="main-content-projects display-flex">'
-                            + '<input class="col-percent-5" type="checkbox" name="project_name"/>'
+                            + '<div class="cursor-pointer col-percent-5"><span class="view-popup_open" data-prj-no="'+data[i].prj_no+'"><i class="fa-solid fa-magnifying-glass"></i></span></div>'
                             + '<div class="project-status-box col-percent-95">'
                                 + '<ul class="project-status display-flex col-percent-100">'
                                     + '<li class="col-percent-30"><a class="view-popup_open" data-prj-no="'+data[i].prj_no+'" href="javascript:void(0)">'+data[i].prj_nm+'</a></li>'
