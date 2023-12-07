@@ -396,6 +396,9 @@
    .completed-text{
         width: 200px !important;
    }
+   .inprogress-text{
+        width: 200px !important;
+   }
 }
 @media screen and (max-width: 760px){
     .view-popup-body-box{

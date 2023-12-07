@@ -15509,3 +15509,27 @@
 23-12-08 01:42:39.892 DEBUG [io-8080-exec-29] mbxvoid.SELECT_PRJ_M                                        (139) : <==      Total: 10
 23-12-08 01:42:39.893 DEBUG [io-8080-exec-29] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@510fa291]
 23-12-08 01:43:45.814 DEBUG [alina-utility-2] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+23-12-08 01:47:54.649 DEBUG [io-8080-exec-35] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+23-12-08 01:47:55.038 DEBUG [io-8080-exec-27] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-12-08 01:47:55.042 DEBUG [io-8080-exec-27] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@640d9551] was not registered for synchronization because synchronization is not active
+23-12-08 01:47:55.537 DEBUG [io-8080-exec-27] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@440e2882] will not be managed by Spring
+23-12-08 01:47:55.540 DEBUG [io-8080-exec-27] mbxvoid.SELECT_PRJ_M                                        (139) : ==>  Preparing: select * from com_prj_m 
+23-12-08 01:47:55.554 DEBUG [io-8080-exec-27] mbxvoid.SELECT_PRJ_M                                        (139) : ==> Parameters: 
+23-12-08 01:47:55.590 DEBUG [io-8080-exec-27] mbxvoid.SELECT_PRJ_M                                        (139) : <==      Total: 10
+23-12-08 01:47:55.590 DEBUG [io-8080-exec-27] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@640d9551]
+23-12-08 01:52:52.513 DEBUG [io-8080-exec-38] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-12-08 01:52:52.515 DEBUG [io-8080-exec-38] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7468e745] was not registered for synchronization because synchronization is not active
+23-12-08 01:52:52.816 DEBUG [io-8080-exec-38] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@ae3d30a] will not be managed by Spring
+23-12-08 01:52:52.820 DEBUG [io-8080-exec-38] mbxvoid.SELECT_PRJ_M                                        (139) : ==>  Preparing: select * from com_prj_m 
+23-12-08 01:52:52.821 DEBUG [io-8080-exec-38] mbxvoid.SELECT_PRJ_M                                        (139) : ==> Parameters: 
+23-12-08 01:52:52.858 DEBUG [io-8080-exec-38] mbxvoid.SELECT_PRJ_M                                        (139) : <==      Total: 10
+23-12-08 01:52:52.861 DEBUG [io-8080-exec-38] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7468e745]
+23-12-08 01:53:53.663 DEBUG [io-8080-exec-36] org.mybatis.spring.SqlSessionUtils                          (104) : Creating a new SqlSession
+23-12-08 01:53:53.663 DEBUG [io-8080-exec-36] org.mybatis.spring.SqlSessionUtils                          (140) : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25863528] was not registered for synchronization because synchronization is not active
+23-12-08 01:53:53.979 DEBUG [io-8080-exec-36] org.mybatis.spring.transact.SpringManagedTransaction        ( 86) : JDBC Connection [com.mysql.jdbc.JDBC4Connection@5bdc2c6e] will not be managed by Spring
+23-12-08 01:53:53.983 DEBUG [io-8080-exec-36] mbxvoid.SELECT_PRJ_M                                        (139) : ==>  Preparing: select * from com_prj_m 
+23-12-08 01:53:53.988 DEBUG [io-8080-exec-36] mbxvoid.SELECT_PRJ_M                                        (139) : ==> Parameters: 
+23-12-08 01:53:54.024 DEBUG [io-8080-exec-36] mbxvoid.SELECT_PRJ_M                                        (139) : <==      Total: 10
+23-12-08 01:53:54.025 DEBUG [io-8080-exec-36] org.mybatis.spring.SqlSessionUtils                          (168) : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25863528]
+23-12-08 01:56:32.467 DEBUG [alina-utility-1] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+23-12-08 01:56:54.327 DEBUG [alina-utility-1] org.apache.ibatis.logging.LogFactory                        (128) : Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.

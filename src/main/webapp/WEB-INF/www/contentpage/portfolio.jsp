@@ -42,7 +42,7 @@
         </article>
         <article class="main-contents main-content-contents"> 
             <div class="main-content-contents-nav display-flex">
-                <div class="col-percent-5"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="col-percent-5"></div>
                 <div class="project-status-box col-percent-95">
                     <ul class="project-status display-flex col-percent-100">
                         <li class="col-percent-30">PROJECT</li>
@@ -76,10 +76,10 @@
                         <span class="view-popup-content_title">참여인원</span>
                         <span id="view-member" class="view-popup-content_text"></span>
                     </div>
-                    <div class="view-popup-contents">
-                        <span class="view-popup-content_title">기여도</span>
-                        <span id="view-contribution" class="view-popup-content_text"></span>
-                    </div>
+<!--                     <div class="view-popup-contents"> -->
+<!--                         <span class="view-popup-content_title">기여도</span> -->
+<!--                         <span id="view-contribution" class="view-popup-content_text"></span> -->
+<!--                     </div> -->
                 </div>
                 <div class="view-popup-contents">
                     <span class="view-popup-content_title">사용기술</span>
