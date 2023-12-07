@@ -212,11 +212,11 @@
 }
 .completed{
     height: 0.4rem;
-    background-color: rgb(77, 253, 97);
+    background-color: rgb(194, 194, 194);
 }
 .todo{
     height: 0.4rem;
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(77, 253, 97);
 }
 .inprogress-text , .completed-text, .todo-text{
     display: flex;
@@ -243,17 +243,7 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: rgb(77, 253, 97);
-}
-.inprogress-text::before{
-    content: "";
-    position: absolute;
-    left: 0px;
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background-color: rgb(74, 168, 251);;
+    background-color: rgb(194, 194, 194);
 }
 .todo-text::before{
     content: "";
@@ -263,7 +253,17 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(77, 253, 97);
+}
+.todo-text::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgb(77, 253, 97);
 }
 .project-status >li{
     padding-right:0.5rem;
@@ -384,7 +384,33 @@
         width: 43% !important;
     }
 }
+@media screen and (max-width: 932px){
+	.completed-text{
+		width:35%;
+	}
+	.inprogress-text{
+		width:35%;
+	}
+	.todo-text{
+		width:30%;
+	}
+	.member-li{
+		width:15% !important;
+	}
+	.completed-text::before {
+	    left: -5px;
+	}
+	.inprogress-text::before {
+	    left: -5px;
+	}
+	.todo-text::before {
+	    left: -5px;
+	}
+}
 @media screen and (max-width: 795px){
+	.main-content-projects{
+		flex-direction: row-reverse;
+	}
    .project-status{
         flex-direction: column;
         align-items: center;
@@ -394,11 +420,14 @@
         text-align: center;
    }
    .completed-text{
-        width: 200px !important;
+        width: 33.33% !important;
    }
    .inprogress-text{
-        width: 200px !important;
+        width: 33.33% !important;
    }
+   .todo-text{
+		width:33.33% !important;
+	}
 }
 @media screen and (max-width: 760px){
     .view-popup-body-box{
@@ -418,6 +447,21 @@
         padding-right: 0.5rem; 
     }
 }
+@media screen and (max-width: 430px){
+    .progressbar-box{
+    	flex-direction:column;
+    }
+    .completed-text{
+        width: 100% !important;
+    }
+    .inprogress-text{
+        width: 100% !important;
+    }
+    .todo-text{
+		width:100% !important;
+	}
+}
+
 @media screen and (max-width: 370px){
     .header-logo_text{
         width: 43% !important;

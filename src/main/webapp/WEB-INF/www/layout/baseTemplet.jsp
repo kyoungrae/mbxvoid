@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width"/>
-    <title>MBX</title>
+    <title>MBX-VOID</title>
     <link href="/com/css/layout.css?20231208" rel="stylesheet">
     <link rel="stylesheet" href="/com/css/index.css?20231208">
 	<link href="/com/assets/fontawesome/css/fontawesome.css?20231207" rel="stylesheet">

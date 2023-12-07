@@ -47,10 +47,9 @@
                     <ul class="project-status display-flex col-percent-100">
                         <li class="col-percent-30">PROJECT</li>
                         <li class="col-percent-20">COMPANY</li>
-                        <li class="col-percent-10">MEMBER</li>
+                        <li class="member-li col-percent-10">MEMBER</li>
                         <li class="col-percent-15">STATUS</li>
-                        <li class="col-percent-20">COMPLETION</li>
-                        <li class="col-percent-5">FILE</li>
+                        <li class="col-percent-25">COMPLETION</li>
                     </ul>
                 </div>
             </div>
@@ -121,10 +120,10 @@ function searchContents(){
         for (var i = 0; i < data.length; i++) {
         	if(data[i].status == "Inprogress"){
         		status = "inprogress-text col-percent-15";
-        		statusbar = "inprogress col-percent-100";
+        		statusbar = "inprogress"+" col-percent-"+data[i].completion;
         	}else if(data[i].status == "Completed"){
         		status = "completed-text col-percent-15";
-        		statusbar = "completed col-percent-100";
+        		statusbar = "completed"+" col-percent-"+data[i].completion;
         	}
             contentsHtml += '<div class="main-content-projects display-flex">'
                             + '<div class="cursor-pointer col-percent-5"><span class="view-popup_open" data-prj-no="'+data[i].prj_no+'"><i class="fa-solid fa-magnifying-glass"></i></span></div>'
@@ -134,13 +133,12 @@ function searchContents(){
                                     + '<li class="col-percent-20"><span>'+data[i].company+'</span></li>'
                                     + '<li class="col-percent-10"><span>'+data[i].member+'</span></li>'
                                     + '<li class="'+status+'"><span>'+data[i].status+'</span></li>'
-                                    + '<li class="col-percent-20 display-flex align-items-center">'
-                                        + '<span class="display-block col-percent-30">'+data[i].completion+'</span>'
+                                    + '<li class="col-percent-25 display-flex align-items-center">'
+                                        + '<span class="display-block col-percent-30">'+data[i].completion+'%</span>'
                                         + '<div class="col-percent-70">'
                                             + '<div class="'+statusbar+'"></div>'
                                         + '</div>'
                                     + '</li>'
-                                    + '<li class="col-percent-5"></li>'
                                 + '</ul>'
                             + '</div>'
                         + '</div>';
