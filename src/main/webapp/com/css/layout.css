@@ -368,3 +368,51 @@
     font-size: 1rem;
     color: #898989;
 }
+
+
+@media screen and (max-width: 1280px){
+    .total_text_sub{
+        padding: 0rem 0.5rem;
+    }
+}
+@media screen and (max-width: 915px){
+	.sidebar{
+        display: none;
+    }
+    .main-body{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 795px){
+   .project-status{
+        flex-direction: column;
+        align-items: center;
+   }
+   .project-status > li{
+        width:100%;
+        text-align: center;
+   }
+   .completed-text{
+        width: 200px !important;
+   }
+}
+@media screen and (max-width: 727px){
+   .main-content-total-box{
+        flex-direction: column;
+        text-align: center;
+
+   }
+}
+@media screen and (max-width: 574px){
+    .progressbar-box > li {
+        padding-right: 0.5rem; 
+    }
+}
+@media screen and (max-width: 370px){
+    .header-logo_text{
+        width: 43% !important;
+    }
+    .nav-link{
+        padding:0.72rem;
+    }
+}

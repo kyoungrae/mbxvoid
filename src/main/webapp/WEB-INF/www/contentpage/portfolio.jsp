@@ -121,8 +121,10 @@ function searchContents(){
         for (var i = 0; i < data.length; i++) {
         	if(data[i].status == "Inprogress"){
         		status = "inprogress-text col-percent-15";
+        		statusbar = "inprogress col-percent-100";
         	}else if(data[i].status == "Completed"){
         		status = "completed-text col-percent-15";
+        		statusbar = "completed col-percent-100";
         	}
             contentsHtml += '<div class="main-content-projects display-flex">'
                             + '<input class="col-percent-5" type="checkbox" name="project_name"/>'
@@ -135,7 +137,7 @@ function searchContents(){
                                     + '<li class="col-percent-20 display-flex align-items-center">'
                                         + '<span class="display-block col-percent-30">'+data[i].completion+'</span>'
                                         + '<div class="col-percent-70">'
-                                            + '<div class="completed col-percent-100"></div>'
+                                            + '<div class="'+statusbar+'"></div>'
                                         + '</div>'
                                     + '</li>'
                                     + '<li class="col-percent-5"></li>'
@@ -184,6 +186,5 @@ function btn_popup_open(data){
 
     })
 }
-
 
 </script>
