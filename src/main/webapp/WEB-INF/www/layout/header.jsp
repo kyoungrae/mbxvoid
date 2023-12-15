@@ -6,6 +6,7 @@
         <div class="header-user_info display-flex align-items-center justify-content-center"></div>
     </div>
 </nav>
+			<input id="logout" type="submit" value="로그아웃" />
 
 <script>
 window.onload = function(){

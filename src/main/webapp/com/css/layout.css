@@ -2,8 +2,8 @@
 * layout.tag page css -----------------------------------------------------------------------
 */
 .main-layoutTag-body{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position:fixed;
 }
 .main-layoutTag-contents{
@@ -125,7 +125,7 @@
 */
 .main-body{
     width: 90%;
-    height:100%;
+    height:90%;
     background: rgba(255, 255, 255, 1);
     overflow-y: scroll;
 }
@@ -136,6 +136,11 @@
 .main-content,.main-footer{
     padding: 15px;
     box-sizing: border-box;
+}
+.main-footer{
+	display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .main-content-title-box{    
     border-top: 1px solid rgb(233, 233, 252);
@@ -185,7 +190,7 @@
     border: 1px solid rgb(233, 233, 252);
     padding: 1.2rem;
     box-sizing: border-box;
-    margin-bottom: 3.25rem;
+    margin-bottom: 1.25rem;
     border-radius: 0.7rem;
 }
 .total_text{
@@ -283,6 +288,32 @@
     padding: 1.2rem;
     border-radius: 0.7rem 0.7rem 0rem 0rem;
 }
+.main-btn-area{
+	display:flex;
+	justify-content:flex-end;
+}
+.main-btn{
+	width: 3.2rem;
+    height: 1.6rem;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin: auto 5px;
+}
+.paging-area{
+	display:flex;
+}
+.pagging-btn{
+	width: 1.2rem;
+    border: 1px solid #888;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    margin: 3px;
+}
 /* 
 * footer.jsp page css -----------------------------------------------------------------------
 */
@@ -291,7 +322,7 @@
 /* 
 * view_popup css -----------------------------------------------------------------------
 */
-#view-popup{
+#View_popup,#Add_popup,#Modify_popup{
     position:fixed;
     top: 0;
     left: 0;
@@ -304,7 +335,7 @@
     flex-direction: column;
     
 }
-.view-popup-body-box{
+.view_popup-body-box,.add_popup-body-box,.modify_popup-body-box{
     width: 60%;
     height: 80%;
     background-color: #fff;
@@ -313,7 +344,7 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 30px #00000053;
 }
-.view-popup-body{
+.view_popup-body,.add_popup-body,.modify_popup-body{
     border: 1px solid rgb(230, 230, 230);
     border-radius: 0.7rem;
     margin-bottom: 1.2rem;
@@ -322,10 +353,44 @@
     overflow-y: scroll;
     
 }
-.view-popup-footer{
+.view_popup-footer,.add_popup-footer,.modify_popup-footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.view_popup_title,.add_popup_title,.modify_popup_title{
+    border-bottom: 1px solid #d0d0d0;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+.view_popup-contents,.add_popup-contents,.modify_popup-contents{
+    box-shadow: 0px 0px 5px #00000021;
+    border-radius: 0.7rem;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    margin-bottom: 1.1rem;
+}
+.add_popup-contents > input{
+	padding: 0.4rem;
+    box-sizing: border-box;
+    margin: 0.3rem 0px;
+}
+.view_popup-contents>span,.add_popup-contents>span,.modify_popup-contents>span{
+    display: block;
+}
+.view_popup-content_title,.add_popup-content_title,.modify_popup-content_title{
+    font-size: 0.9rem;
+    color: #000000;
+}
+.view_popup-content_text,.add_popup-content_text,.modifty_popup-content_text{
+    font-size: 1rem;
+    color: #898989;
+}
+#Add_popup-form{
+	width:100%;
+	height:100%;
 }
 .btn{
     padding: 0.7rem 1.4rem;
@@ -337,37 +402,14 @@
     box-shadow: 0px 0px 5px #00000053;
     border: 1px solid #d0d0d0;
     cursor:pointer;
+    margin:1.2rem;
 }
 .btn:hover{
     background-color: #f4f4f4;
     color: #9f9f9f;
     box-shadow: 0px 0px 10px #1088ff53;
 }
-.view-popup_title{
-    border-bottom: 1px solid #d0d0d0;
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-}
-.view-popup-contents{
-    box-shadow: 0px 0px 5px #00000021;
-    border-radius: 0.7rem;
-    padding: 1.2rem;
-    box-sizing: border-box;
-    margin-bottom: 1.1rem;
-}
-.view-popup-contents>span{
-    display: block;
-}
-.view-popup-content_title{
-    font-size: 0.9rem;
-    color: #000000;
-}
-.view-popup-content_text{
-    font-size: 1rem;
-    color: #898989;
-}
+
 @media screen and (max-width: 1280px){
     .total_text_sub{
         padding: 0rem 0.5rem;
@@ -430,7 +472,15 @@
 	}
 }
 @media screen and (max-width: 760px){
-    .view-popup-body-box{
+    .view_popup-body-box{
+        height: 70%;
+        width: 90%;
+    }
+    .add_popup-body-box{
+        height: 70%;
+        width: 90%;
+    }
+    .modify_popup-body-box{
         height: 70%;
         width: 90%;
     }

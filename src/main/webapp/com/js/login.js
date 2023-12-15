@@ -2,7 +2,7 @@ $(function(){
     var mebx = new Mebx();
     // 로그인 박스 입력시 아이콘 색 변경
     $(".loginButton-box-fram").keyup(function(){
-        
+         
         var id = $("#login_id").val();
         if("undefined" === typeof id || "" === id || null === id){
             $(".fa-chevron-circle-right").css({'color':'#999'});
@@ -56,14 +56,18 @@ $(function(){
     function loginbuttonClickEvent(){
 		event.preventDefault();
 		
-		logInValidationCheck().then(function(isValid){
-			if(isValid){
-				window.location.href="/page.do?command=goMainPage";
-			}else{
-				mebx.showMessage({"title":"로그인 실패","message":"아이디를 확인해 주세요.","type":"error"});
-				vibrationEffect();
-			}
-		})
+		if(loginProcess()){
+			logInValidationCheck().then(function(isValid){
+				if(isValid){
+					window.location.href="/page.do?command=goMainPage";
+				}else{
+					mebx.showMessage({"title":"로그인 실패","message":"로그인정보를 확인해 주세요.","type":"error"});
+					loginProcessReset();
+					vibrationEffect();
+				}
+			})
+		}else{
+		}
 
     }
     //로그인 실패시 이팩트 
@@ -73,6 +77,39 @@ $(function(){
 			$(".input_target-basic_style").removeClass("vibration");
 		}, 400);
 	} 
+	function loginProcessReset(){
+		$("#login_pw").val("");
+		$("#login_id").val("");
+		$("#login_pw").addClass("hidden");
+		$("#login_id").removeClass("hidden");
+		$(".login_span_password").addClass("hidden");
+		$(".login_span_id").removeClass("hidden");
+		$("#icon-sign_in-button").data("login-process",false);
+		$(".fa-chevron-circle-right").css({'color':'#999'});
+	}
+	function loginProcess(){
+		var flag = $("#icon-sign_in-button").data("login-process");
+		var id = $("#login_id").val();
+		var result = false;
+		if(id != null && typeof id != "undefined" && id != ""){
+			if(!flag){
+				$(".login_span_id").addClass("hidden");
+				$(".login_span_password").removeClass("hidden");
+				$("#icon-sign_in-button").data("login-process",true);
+				$("#login_id").addClass("hidden");
+				$("#login_pw").removeClass("hidden");
+				$("#login_pw").focus();
+				
+			}else{
+				result = true;
+			}
+		}else{
+			mebx.showMessage({"title":"로그인 실패","message":"로그인정보를 확인해 주세요.","type":"error"});
+			vibrationEffect();
+		}
+		return result;
+		
+	}
     //로그인 유효성 검사
     function logInValidationCheck(){
 		return new Promise(function(resolve){
@@ -80,7 +117,6 @@ $(function(){
         var requiredInputs = $("#LOGIN_FORM input.required");
         var isValid = false;
         var param = [];
-        
 	        requiredInputs.each(function(){
 	            var inputValue = $(this).val();
 	            var inputId = $(this)[0].id;
@@ -93,6 +129,7 @@ $(function(){
 					isValid = true;
 				}
 	            param.push({[inputId] : inputValue});
+	        });
 	            if(isValid){
 					checkLogin(param ,function(callbackData){
 						isValid = callbackData;
@@ -101,7 +138,6 @@ $(function(){
 				}else{
 			        resolve(isValid);
 				}
-	        });
     	})
     };
     function checkLogin(param,callbackData){
@@ -109,7 +145,8 @@ $(function(){
 		        type: "POST", 
 		        url: "/login.do?command=loginCheck",
 		        data: JSON.stringify({
-					user_id : param[0].login_id
+					user_id : param[0].login_id,
+					user_pw : param[1].login_pw
 			    }),
 			    contentType: "application/json; charset=utf-8",
 			    dataType: "json",

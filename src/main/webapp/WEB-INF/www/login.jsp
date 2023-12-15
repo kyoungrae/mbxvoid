@@ -25,13 +25,15 @@
 	                    <div class="user_box-loginButton-box display-flex row-percent-30 col-percent-60">
 	                        <div class="loginButton-box-fram input_target-basic_style display-flex row-percent-40 col-percent-100">
 	                            <div>
-	                                <span class="login_span" data-login-active="false">아이디를 입력해 주세요.</span>
+	                                <span class="login_span_id login_span" data-login-active="false">아이디를 입력해 주세요.</span>
+	                                <span class="login_span_password login_span_pw hidden">비밀번호를 입력해 주세요.</span>
 	                                <form id="LOGIN_FORM">
-	                                    <input id="login_id" class="required hidden row-percent-65 input_basic_placeholder" type="text"  autocomplete="off">
+	                                    <input id="login_id" name="user_id" class="required hidden row-percent-65 input_basic_placeholder" type="text"  autocomplete="off">
+	                                    <input id="login_pw" name="user_pw" class="required hidden row-percent-65 input_basic_placeholder" type="text"  autocomplete="off">
 	                                </form>
 	                            </div>
 	                            <label for="icon-sign_in-button">
-		                            <button type="button" id="icon-sign_in-button">
+		                            <button type="button" id="icon-sign_in-button" data-login-process="false">
 		                            	<i class="fas fa-chevron-circle-right"></i>
 		                        	</button>
 	                            </label>
@@ -40,8 +42,6 @@
 	                </div>
 	                <article>
 	           			<div id="guest_login" class="cursor-pointer">GUEST LOGIN</div>
-	           			
-	           			
 	           		</article>
 	           </article>
 	        </section>

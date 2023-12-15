@@ -1,5 +1,6 @@
 function Mebx(){
 }
+var mebx = new Mebx;
 /*
  *   Mebx.showMessage
  *  화면 오른쪽 하단에 메세지 박스 표시
@@ -385,28 +386,42 @@ Mebx.prototype.nav_tab = function(){
 
 }
 /**
- * view-popup_close  event
+ * popup_close click event
  */
 Mebx.prototype.btn_popup_close = function(){
-    $(".view-popup_close").click(function(){
-        if(!$("#view-popup").hasClass("hidden")){
-            $("#view-popup").addClass("hidden");
+    $(".popup_close").click(function(){
+		var e = $(this).parents().filter('[data-field="FORM"]').eq(0);
+        if(!e.hasClass("hidden")){
+            e.addClass("hidden");
         }else{
-            $("#view-popup").removeClass("hidden");
+            e.removeClass("hidden");
         }
-
     })
 }
-Mebx.prototype.btn_popup_open = function(){
-    console.log("hihihi")
-    console.log($(".view-popup_open"))
-    $(".view-popup_open").click(function(){
-        console.log($("#view_popup").hasClass("hidden"))
-        if($("#view-popup").hasClass("hidden")){
-            $("#view-popup").removeClass("hidden");
-        }else{
-            $("#view-popup").addClass("hidden");
-        }
-
-    })
+/**
+ * popup_close call event
+ */
+Mebx.prototype.popup_close = function(){
+		var e = $("article").filter('[data-field="FORM"]');
+		for(var i =0; i<e.length; i++){
+			var f = e.eq(i);
+			if(!f.hasClass("hidden")){
+				f.addClass("hidden");
+				break;
+			}
+		}
 }
+/**
+ * form popup input value event
+ */
+Mebx.prototype.AddFormInputData = function(e){
+	var param = new Array();
+	var content = window.editor.getData();
+	$("#editor").val(content);
+	$("#"+e+" input[data-field]").each(function(){
+		param[$(this).data("field")]= $(this).val();
+	})
+	return param;
+} 
+	
+    

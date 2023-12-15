@@ -22,4 +22,65 @@
 	<select id="SELECT_PRJ_M" resultMap="Result_ProjectDto" parameterType="com.mbxvoid.bean.ProjectDto">
 		select * from com_prj_m
 	</select>
+	
+	<insert id="INSERT_PRJ_M">
+		insert into com_prj_m(
+						prj_nm
+						,prj_no
+						<if test="company != null and company != '' ">, company</if>
+						<if test="member != null and member != '' ">, member</if>
+						<if test="status != null and status != '' ">, status</if>
+						<if test="completion != null and completion != '' ">, completion</if>
+						<if test="file_nm != null and file_nm != '' ">, file_nm</if>
+						<if test="file_path != null and file_path != '' ">, file_path</if>
+						<if test="contribution != null and contribution != '' ">, contribution</if>
+						<if test="skill != null and skill != '' ">, skill</if>
+						<if test="assigned_task != null and assigned_task != '' ">, assigned_task</if>
+						<if test="cont != null and cont != '' ">, cont</if>
+						<if test="period_from != null and period_from != '' ">, period_from</if>
+						<if test="period_to != null and period_to != '' ">, period_to</if>
+					)values(
+						#{prj_nm},
+						nextval(prj_no_seq)
+						<if test="company != null and company != '' ">, #{company}</if>
+						<if test="member != null and member != '' ">, #{member}</if>
+						<if test="status != null and status != '' ">, #{status}</if>
+						<if test="completion != null and completion != '' ">, #{completion}</if>
+						<if test="file_nm != null and file_nm != '' ">, #{file_nm}</if>
+						<if test="file_path != null and file_path != '' ">, #{file_path}</if>
+						<if test="contribution != null and contribution != '' ">, #{contribution}</if>
+						<if test="skill != null and skill != '' ">, #{skill}</if>
+						<if test="assigned_task != null and assigned_task != '' ">, #{assigned_task}</if>
+						<if test="cont != null and cont != '' ">, #{cont}</if>
+						<if test="period_from != null and period_from != '' ">, #{period_from}</if>
+						<if test="period_to != null and period_to != '' ">, #{period_to}</if>
+					)
+	</insert>
+	<update id="UPDATE_PRJ_M">
+		update com_prj_m
+			<set>
+						<if test="prj_no != null">prj_no = #{prj_no}</if>
+						<if test="company != null">, company = #{company}</if>
+						<if test="member != null">, member= #{member}</if>
+						<if test="status != null">, status= #{status}</if>
+						<if test="completion != null">, completion= #{completion}</if>
+						<if test="file_nm != null">, file_nm= #{file_nm}</if>
+						<if test="file_path != null">, file_path= #{file_path}</if>
+						<if test="contribution != null">, contribution= #{contribution}</if>
+						<if test="skill != null">, skill= #{skill}</if>
+						<if test="assigned_task != null">, assigned_task= #{assigned_task}</if>
+						<if test="cont != null">, cont= #{cont}</if>
+						<if test="period_from != null">, period_from= #{period_from}</if>
+						<if test="period_to != null">, period_to= #{period_to}</if>
+			</set>
+			<where>
+				prj_no = #{prj_no}
+			</where>
+	</update>
+	<delete id="DELETE_PRJ_M">
+		delete from com_prj_m
+		<where>
+			prj_no = #{prj_no}
+		</where>
+	</delete>
 </mapper>

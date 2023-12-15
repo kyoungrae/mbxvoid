@@ -18,6 +18,8 @@
 	<link href="/com/assets/fontawesome/css/v4-font-face.css?20231207" rel="stylesheet">
     <script src="/com/js/jquery/jquery-3.6.0.min.js?20231207"></script>
     <script src="/com/js/login.js?20231207"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+    <script src="/com/js/customckeditor/uploadAdapter.js"></script>
 </head>
 
 <body>
