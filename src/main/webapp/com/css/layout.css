@@ -131,7 +131,7 @@
 }
 .main-content{
     height: auto;
-    margin-bottom: 3.2rem;
+    margin-bottom: 2.2rem;
 }
 .main-content,.main-footer{
     padding: 15px;
@@ -141,6 +141,9 @@
 	display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(237, 241, 244);
+    padding: 0.7rem;
+    border-radius: 0rem 0rem 0.7rem 0.7rem;
 }
 .main-content-title-box{    
     border-top: 1px solid rgb(233, 233, 252);
@@ -286,7 +289,7 @@
 }
 .main-content-projects{
     padding: 1.2rem;
-    border-radius: 0.7rem 0.7rem 0rem 0rem;
+/*     border-radius: 0.7rem 0.7rem 0rem 0rem; */
 }
 .main-btn-area{
 	display:flex;
@@ -297,22 +300,36 @@
     height: 1.6rem;
     background: #fff;
     border: 1px solid #dbdbdb;
+    color:rgb(110, 110, 110);
     border-radius: 0.2rem;
     cursor: pointer;
     margin: auto 5px;
+    padding: 0.2rem;
+    box-sizing: content-box;
+}
+.main-btn:hover{
+	background-color: rgb(241, 241, 241);
 }
 .paging-area{
 	display:flex;
 }
+.paging-area>ul>li{
+	background:#fff;
+}
 .pagging-btn{
 	width: 1.2rem;
-    border: 1px solid #888;
+    border: 1px solid #dbdbdb;
     border-radius: 0.2rem;
+    color:rgb(110, 110, 110);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor:pointer;
     margin: 3px;
+    padding: 0.3rem;
+}
+.pagging-btn>a{
+	color:rgb(110, 110, 110) !important;
 }
 /* 
 * footer.jsp page css -----------------------------------------------------------------------
@@ -410,6 +427,9 @@
     box-shadow: 0px 0px 10px #1088ff53;
 }
 
+.rowClick{
+	background: #e7e7e7;
+}
 @media screen and (max-width: 1280px){
     .total_text_sub{
         padding: 0rem 0.5rem;

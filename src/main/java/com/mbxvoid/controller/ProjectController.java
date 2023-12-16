@@ -25,13 +25,7 @@ public class ProjectController {
     @RequestMapping(params = "command=searchProject")
     @ResponseBody
     public List<ProjectDto> searchProject() throws Exception{
-    	List<ProjectDto> list = null;
-    	try {
-			list = projectService.retriveProject();
-		} catch (Exception e) {
-			
-		}
-    	return list;
+    	return projectService.retriveProject();
       
     }
     @RequestMapping(params = "command=saveProject")

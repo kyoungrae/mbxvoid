@@ -423,5 +423,18 @@ Mebx.prototype.AddFormInputData = function(e){
 	})
 	return param;
 } 
-	
+/**
+ * row click event
+ */
+Mebx.prototype.rowGridClickEvent = function(){
+	$(".row").on("click",function(){
+		console.log($(this)[0].id);
+		if($(this).hasClass("rowClick")){
+			$(this).removeClass("rowClick");	
+		}else{
+			$(".row").removeClass("rowClick");
+			$(this).addClass("rowClick");	
+		}
+	})
+}	
     

@@ -57,28 +57,28 @@ $("#guest_login").click(function(){
 	guestLogin();
 })
 function guestLogin(){
-	var mebx = new Mebx();
-	var path = '/login.do?command=loginCheck';
-    $.ajax({
-    	type:"POST",
-    	url : path,
-    	data: JSON.stringify({
-    		user_id : "guest"
-    	}),
-    	contentType : "application/json; charset=utf-8",
-    	dataType : "json",
-    	success : function(data){
-    		if(data){
+// 	var mebx = new Mebx();
+// 	var path = '/login.do?command=loginCheck';
+//     $.ajax({
+//     	type:"POST",
+//     	url : path,
+//     	data: JSON.stringify({
+//     		user_id : "guest"
+//     	}),
+//     	contentType : "application/json; charset=utf-8",
+//     	dataType : "json",
+//     	success : function(data){
+//     		if(data){
     			window.location.href="/page.do?command=goMainPage";
-    		}else{
-	    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
-    		}
-    	},
-    	error : function(){
-    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
+//     		}else{
+// 	    		mebx.showMessage({title:"error", message:"error" ,type:"error"});
+//     		}
+//     	},
+//     	error : function(){
+//     		mebx.showMessage({title:"error", message:"error" ,type:"error"});
     		
-    	}
+//     	}
     	
-    });
+//     });
 }
 </script>

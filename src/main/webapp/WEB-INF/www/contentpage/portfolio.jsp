@@ -54,15 +54,7 @@
                 </div>
             </div>
             <div class="append-main-content-projects"></div>
-        </article>
         <footer class="main-footer">
-	        <div class="main-btn-area col-percent-100">
-	        	<div>
-	        		<button class="main-btn add-popup_open">등록</button>
-	        		<button class="main-btn">수정</button>
-	        		<button class="main-btn">삭제</button>
-	        	</div>
-	        </div>
 	        <div class="paging-area">
 	        	<ul>
 	        		<li class="pagging-btn"><a>&lt;</a></li>
@@ -75,6 +67,14 @@
 	        	</ul>
 	        </div>
         </footer>
+        </article>
+	        <div class="main-btn-area col-percent-100">
+	        	<div>
+	        		<button type="button" class="main-btn add-popup_open">등록</button>
+	        		<button type="button" class="main-btn modify-popup_open">수정</button>
+	        		<button type="button" class="main-btn delete-popup_open" disabled='disabled'>삭제</button>
+	        	</div>
+	        </div>
     </section>
     <article id="View_popup" class="hidden" data-field="FORM">
         <div class="view_popup-body-box">
@@ -169,6 +169,8 @@ $(document).ready(function() {
     init();
 })
 function init(){
+	//Grid click event
+	
 	//tab 활성화 이벤트  
 	mebx.nav_tab();
 	
@@ -209,11 +211,11 @@ function searchContents(){
         		status = "completed-text col-percent-15";
         		statusbar = "completed"+" col-percent-"+data[i].completion;
         	}
-            contentsHtml += '<div class="main-content-projects display-flex">'
+            contentsHtml += '<div id="row'+i+'" class="row main-content-projects display-flex cursor-pointer" data-prj-no="'+data[i].prj_no+'"">'
                             + '<div class="cursor-pointer col-percent-5"><span class="view-popup_open" data-prj-no="'+data[i].prj_no+'"><i class="fa-solid fa-magnifying-glass"></i></span></div>'
                             + '<div class="project-status-box col-percent-95">'
                                 + '<ul class="project-status display-flex col-percent-100">'
-                                    + '<li class="col-percent-30"><a class="view-popup_open" data-prj-no="'+data[i].prj_no+'" href="javascript:void(0)">'+data[i].prj_nm+'</a></li>'
+                                    + '<li class="col-percent-30">'+data[i].prj_nm+'</li>'
                                     + '<li class="col-percent-20"><span>'+data[i].company+'</span></li>'
                                     + '<li class="col-percent-10"><span>'+data[i].member+'</span></li>'
                                     + '<li class="'+status+'"><span>'+data[i].status+'</span></li>'
@@ -231,6 +233,7 @@ function searchContents(){
         $(".nav-total_text").append(data.length);
         $(".append-main-content-projects").append(contentsHtml);
             openPopup(data);
+            mebx.rowGridClickEvent();
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
         // Error callback
