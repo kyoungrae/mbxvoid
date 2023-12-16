@@ -363,7 +363,7 @@ input:focus-visible{
 .bar_01 ,.bar_02,.bar_03{
     width: 30px;
     height: 5px;
-    background-color: #000000;
+    background-color: rgb(194, 194, 194);
     position: absolute;
 }
 .bar_01{
@@ -378,6 +378,9 @@ input:focus-visible{
     top: calc(50% - -5px);
     transition: all 0.2s cubic-bezier(0.8, 0, 0.3, 1.5);
 }
+/* .bar_01:hover,.bar_02:hover,.bar_03:hover{ */
+/* 	background-color:#3e3e3e; */
+/* } */
 #clock{
     margin: 10px;
 }

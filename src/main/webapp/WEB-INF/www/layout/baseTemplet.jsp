@@ -9,15 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width"/>
     <title>MBX-VOID</title>
-    <link href="/com/css/layout.css?20231208" rel="stylesheet">
-    <link rel="stylesheet" href="/com/css/index.css?20231208">
-	<link href="/com/assets/fontawesome/css/fontawesome.css?20231207" rel="stylesheet">
-	<link href="/com/assets/fontawesome/css/all.css?20231207" rel="stylesheet">
-	<link href="/com/assets/fontawesome/css/solid.css?20231207" rel="stylesheet">
-	<link href="/com/assets/fontawesome/css/brands.css?20231207" rel="stylesheet">
-	<link href="/com/assets/fontawesome/css/v4-font-face.css?20231207" rel="stylesheet">
-    <script src="/com/js/jquery/jquery-3.6.0.min.js?20231207"></script>
-    <script src="/com/js/login.js?20231207"></script>
+    <link href="/com/css/layout.css?20231215" rel="stylesheet">
+    <link rel="stylesheet" href="/com/css/index.css?20231215">
+	<link href="/com/assets/fontawesome/css/fontawesome.css?20231215" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/all.css?20231215" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/solid.css?20231215" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/brands.css?20231215" rel="stylesheet">
+	<link href="/com/assets/fontawesome/css/v4-font-face.css?20231215" rel="stylesheet">
+    <script src="/com/js/jquery/jquery-3.6.0.min.js?20231215"></script>
+    <script src="/com/js/login.js?20231215"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
     <script src="/com/js/customckeditor/uploadAdapter.js"></script>
 </head>
@@ -32,7 +32,7 @@
 <%-- 	        <tiles:insertAttribute name="footer" /> --%>
     </div>
 </body>
-<script src="/com/js/common.js?20231207"></script>
+<script src="/com/js/common.js?20231215"></script>
 <script>
     $(function(){
         var mbx = new Mebx();
