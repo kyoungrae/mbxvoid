@@ -43,6 +43,7 @@ Mebx.prototype.showMessage = function(e){
 function timeoutSetting(calss_name){
 	  setTimeout(function () {
                 $("."+calss_name).removeClass("show");
+                $(".messageBox_layer").remove();
             }, 1000);
 }
 /* 
@@ -428,7 +429,6 @@ Mebx.prototype.AddFormInputData = function(e){
  */
 Mebx.prototype.rowGridClickEvent = function(){
 	$(".row").on("click",function(){
-		console.log($(this)[0].id);
 		if($(this).hasClass("rowClick")){
 			$(this).removeClass("rowClick");	
 		}else{
@@ -436,5 +436,4 @@ Mebx.prototype.rowGridClickEvent = function(){
 			$(this).addClass("rowClick");	
 		}
 	})
-}	
-    
+}

@@ -72,7 +72,7 @@
 	        	<div>
 	        		<button type="button" class="main-btn add-popup_open">등록</button>
 	        		<button type="button" class="main-btn modify-popup_open">수정</button>
-	        		<button type="button" class="main-btn delete-popup_open" disabled='disabled'>삭제</button>
+	        		<button type="button" class="main-btn delete-popup_open">삭제</button>
 	        	</div>
 	        </div>
     </section>
@@ -159,36 +159,66 @@
 	        </form>
 		</div>
     </article>
+     <article id="Delete_popup" class="hidden" data-field="FORM">
+        <div class="delete_popup-body-box">
+	        <form id="Delete_popup-form">
+	            <div class="delete_popup-body row-percent-80">
+	                <div class="delete_popup_title col-percent-100 row-percent-50 justify-content-center">
+	                    <b><span id="delete-prj_nm"></span></b><span>(을)를 정말 삭제 하시겠습니까?</span>
+	                </div>
+	                <input id="delete-prj_no" data-field="prj_no" class="hidden" type="hidden"/>
+	            </div>
+	            <footer class="view_popup-footer row-percent-10">
+	            	<button class="btn delete-popup_save" type="button"><i class="fa-solid fa-check">삭제</i></button>
+	                <button class="btn popup_close" type="button"><i class="fa-solid fa-xmark">닫기</i></button>
+	            </footer>
+	        </form>
+        </div>
+    </article>
 </div>
 <script>
 
 $(document).ready(function() {
 	var mebx = new Mebx();
 	var data_obj = [];
+	var rowNum = "";
     searchContents();
     init();
 })
 function init(){
 	//Grid click event
-	
-	//tab 활성화 이벤트  
+	mebx.rowGridClickEvent();
+	// tab active event
 	mebx.nav_tab();
 	
-	//팝업 닫기 클릭  팝업 이벤트 
+	//popup close click event
 	mebx.btn_popup_close();
 	
-	//등록팝업 버튼 클릭 이벤트
+	//add popup button click evnet
 	$(".add-popup_open").click(function(){
 		addPopup();
 	});
 	
-	//등록 버튼 이벤트 
+	//add button click event 
 	$(".add-popup_save").click(function(){
 		var addFormParam = mebx.AddFormInputData("Add_popup-form");
 		savePrject(addFormParam);
 		location.reload();
 		mebx.popup_close();
 	});
+
+	// delete popup button click event
+	$(".delete-popup_open").click(function(){
+		mebx.showMessage({title:"error", message:"권한이 없습니다." ,type:"error"});
+// 		deletePopup(rowNum);
+	})
+	// delete button click event
+	$(".delete-popup_save").click(function(){
+		var ob = mebx.AddFormInputData("Delete_popup-form");
+		deletePrject(ob);
+		location.reload();
+		mebx.popup_close();
+	})
 }
 
 function searchContents(){
@@ -215,7 +245,7 @@ function searchContents(){
                             + '<div class="cursor-pointer col-percent-5"><span class="view-popup_open" data-prj-no="'+data[i].prj_no+'"><i class="fa-solid fa-magnifying-glass"></i></span></div>'
                             + '<div class="project-status-box col-percent-95">'
                                 + '<ul class="project-status display-flex col-percent-100">'
-                                    + '<li class="col-percent-30">'+data[i].prj_nm+'</li>'
+                                    + '<li class="col-percent-30" data-field="prj_nm">'+data[i].prj_nm+'</li>'
                                     + '<li class="col-percent-20"><span>'+data[i].company+'</span></li>'
                                     + '<li class="col-percent-10"><span>'+data[i].member+'</span></li>'
                                     + '<li class="'+status+'"><span>'+data[i].status+'</span></li>'
@@ -233,7 +263,16 @@ function searchContents(){
         $(".nav-total_text").append(data.length);
         $(".append-main-content-projects").append(contentsHtml);
             openPopup(data);
-            mebx.rowGridClickEvent();
+//             mebx.rowGridClickEvent();
+			$(".row").on("click",function(){
+				if($(this).hasClass("rowClick")){
+					$(this).removeClass("rowClick");	
+				}else{
+					$(".row").removeClass("rowClick");
+					$(this).addClass("rowClick");	
+				}
+				rowNum = $(this)[0].id;
+			})
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
         // Error callback
@@ -259,6 +298,23 @@ function savePrject(ob){
 			cont : ob.cont,
 			period_from : ob.period_from,
 			period_to : ob.period_to
+	    }),
+	    contentType: "application/json; charset=utf-8",
+	    dataType: "json"
+	})
+	    .done(function(data) {
+	        // Success callback
+	    })
+	    .fail(function(jqXHR, textStatus, errorThrown) {
+	        // Error callback
+	    });
+}
+function deletePrject(ob){
+	$.ajax({
+	    type: "POST",
+	    url: "/project.do?command=deleteProject",
+	    data: JSON.stringify({
+	    	prj_no : ob.prj_no,
 	    }),
 	    contentType: "application/json; charset=utf-8",
 	    dataType: "json"
@@ -305,6 +361,20 @@ function addPopup(){
     }
 	
 }
+function deletePopup(row_no){
+	if($("#Delete_popup").hasClass("hidden")){
+        $("#Delete_popup").removeClass("hidden");
+    }else{
+        $("#Delete_popup").addClass("hidden");
+    }
+	
+	var ob = new Array();
+	var prj_no = $("#"+row_no+"").data("prj-no");
+	var prj_nm = $("#"+row_no+" ul li[data-field='prj_nm']").text();
+	console.log(prj_nm);
+	$("#delete-prj_no").val(prj_no);
+	$("#delete-prj_nm").text(prj_nm);
+}
 function MyCustomUploadAdapterPlugin(editor) {
     editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
         return new UploadAdapter(loader)
@@ -319,6 +389,5 @@ ClassicEditor.create(document.querySelector('#editor'), {
 }).catch( error => {
     console.error( error );
 });
-
 			 
 </script>

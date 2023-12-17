@@ -371,9 +371,9 @@
 
 
 /* 
-* view_popup css -----------------------------------------------------------------------
+* popup css -----------------------------------------------------------------------
 */
-#View_popup,#Add_popup,#Modify_popup{
+#View_popup,#Add_popup,#Modify_popup,#Delete_popup{
     position:fixed;
     top: 0;
     left: 0;
@@ -386,6 +386,15 @@
     flex-direction: column;
     
 }
+.delete_popup-body-box{
+	width: 60%;
+    height: 30%;
+    background-color: #fff;
+    border-radius: 0.7rem;
+    padding: 2.2rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 30px #00000053;
+}
 .view_popup-body-box,.add_popup-body-box,.modify_popup-body-box{
     width: 60%;
     height: 80%;
@@ -395,7 +404,7 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 30px #00000053;
 }
-.view_popup-body,.add_popup-body,.modify_popup-body{
+.view_popup-body,.add_popup-body,.modify_popup-body,.delete_popup-body{
     border: 1px solid rgb(230, 230, 230);
     border-radius: 0.7rem;
     margin-bottom: 1.2rem;
@@ -404,19 +413,19 @@
     overflow-y: scroll;
     
 }
-.view_popup-footer,.add_popup-footer,.modify_popup-footer{
+.view_popup-footer,.add_popup-footer,.modify_popup-footer,.delete_popup-footer{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.view_popup_title,.add_popup_title,.modify_popup_title{
+.view_popup_title,.add_popup_title,.modify_popup_title,.delete_popup_title{
     border-bottom: 1px solid #d0d0d0;
     display: flex;
     align-items: center;
     font-size: 1.4rem;
     margin-bottom: 1.2rem;
 }
-.view_popup-contents,.add_popup-contents,.modify_popup-contents{
+.view_popup-contents,.add_popup-contents,.modify_popup-contents,.delete_popup-contents{
     box-shadow: 0px 0px 5px #00000021;
     border-radius: 0.7rem;
     padding: 1.2rem;
@@ -428,14 +437,14 @@
     box-sizing: border-box;
     margin: 0.3rem 0px;
 }
-.view_popup-contents>span,.add_popup-contents>span,.modify_popup-contents>span{
+.view_popup-contents>span,.add_popup-contents>span,.modify_popup-contents>span,.delete_popup-contents>span{
     display: block;
 }
-.view_popup-content_title,.add_popup-content_title,.modify_popup-content_title{
+.view_popup-content_title,.add_popup-content_title,.modify_popup-content_title,.delete_popup-content_title{
     font-size: 0.9rem;
     color: #000000;
 }
-.view_popup-content_text,.add_popup-content_text,.modifty_popup-content_text{
+.view_popup-content_text,.add_popup-content_text,.modifty_popup-content_text,.delete_popup-content_text{
     font-size: 1rem;
     color: #898989;
 }
